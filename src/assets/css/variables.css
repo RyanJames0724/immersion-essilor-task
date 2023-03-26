@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Agrandir-Thin;
+  src: url("../fonts/Agrandir-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: Agrandir-Regular;
+  src: url("../fonts/Agrandir-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Helvetica;
+  src: url("../fonts/Helvetica.woff");
+}
+@font-face {
+  font-family: main-font;
+  src: url("../fonts/Main-Font.woff2");
+}
+:root {
+  --banner-max-height: 100vh;
+  --banner-min-height: 600px;
+  --gradient-height: 100%;
+  --app-container-width: 1440px;
+  --layered-background: #1c1c1c;
+  --layered-primary-color: #1c1c1c;
+  --layered-secondary-color: #ededf0;
+  --app-color-light-grey: #f3f4f4;
+  --layered-icon-size: 90px;
+  --grid-card-width: 250px;
+  --grid-card-gap: 16px;
+}
+
+/*# sourceMappingURL=variables.css.map */
