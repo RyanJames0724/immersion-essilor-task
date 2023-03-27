@@ -2,18 +2,28 @@ import express from 'express'
 // import axios from 'axios'
 import { buildSchema } from 'graphql'
 import { graphqlHTTP } from 'express-graphql'
-import  mockData  from './mock-data.js'
+import mockData from './mock-data.js'
 
 const app = express()
 
 
 const schema = buildSchema(`
+    type buttonData {
+        id: Int
+        buttonText: String
+    }
+
+    type imageData {
+        id: Int
+        imageContent: String
+    }
+
     type Data {
         id: Int,
-        bannerTitle: String,
-        bannerParagraph: String,
-        detailsTitle: String,
-        detailsParagraph: String
+        placementTitle: String,
+        placementButtons: [buttonData]
+        placementParagraph: String
+        imageText: [imageData]
     }
 
     type Query {

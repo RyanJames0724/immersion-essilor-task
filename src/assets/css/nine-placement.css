@@ -39,4 +39,31 @@ html {
   font-family: Helvetica;
 }
 
-/*# sourceMappingURL=global.css.map */
+.one-column-layout {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: max-content;
+  grid-auto-rows: max-content;
+  width: 100%;
+  margin: 0 auto;
+  background: red;
+}
+.one-column-layout .main-placement-9 {
+  grid-row: inherit;
+}
+.one-column-layout .one-column-layout-row {
+  z-index: 1;
+  background: #f3f4f4;
+}
+.one-column-layout .one-column-layout-row div .disclaimer {
+  max-width: var(--app-container-width);
+  font-size: 10px;
+  line-height: 2;
+  margin: auto;
+  padding: 20px 20px 40px;
+}
+.one-column-layout .one-column-layout-row div .disclaimer span div p {
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=nine-placement.css.map */

@@ -1,0 +1,156 @@
+@font-face {
+  font-family: Agrandir-Thin;
+  src: url("../fonts/Agrandir-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: Agrandir-Regular;
+  src: url("../fonts/Agrandir-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Helvetica;
+  src: url("../fonts/Helvetica.woff");
+}
+@font-face {
+  font-family: main-font;
+  src: url("../fonts/Main-Font.woff2");
+}
+:root {
+  --banner-max-height: 100vh;
+  --banner-min-height: 600px;
+  --gradient-height: 100%;
+  --app-container-width: 1440px;
+  --layered-background: #1c1c1c;
+  --layered-primary-color: #1c1c1c;
+  --layered-secondary-color: #ededf0;
+  --app-color-light-grey: #f3f4f4;
+  --layered-icon-size: 90px;
+  --grid-card-width: 250px;
+  --grid-card-gap: 16px;
+  --app-color-dark-grey: #1c1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Helvetica;
+}
+
+.one-column-layout {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: max-content;
+  grid-auto-rows: max-content;
+  width: 100%;
+  margin: 0 auto;
+  background: red;
+}
+.one-column-layout .main-placement-7 {
+  grid-row: inherit;
+}
+.one-column-layout .one-column-layout-row {
+  z-index: 1;
+  background: #f3f4f4;
+}
+.one-column-layout .one-column-layout-row div .placement-7-title {
+  text-transform: uppercase;
+  font-family: Agrandir-Regular;
+  font-weight: normal;
+  font-size: 28px;
+  margin: 20px auto 30px;
+  width: fit-content;
+  text-align: center;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon {
+  width: 100%;
+  max-width: var(--app-container-width);
+  margin: auto;
+  padding: 68px 24px;
+  display: flex;
+  background-color: #fff;
+  transform: translateY(-20px);
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .column-item {
+  transition: all 0.75s ease-in-out 0s;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item {
+  text-align: center;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .item-icon {
+  max-width: 120px;
+  max-height: 120px;
+  margin: 0 auto 23px;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #f3f4f4;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .item-icon .icon-wrapper {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0px;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .item-icon .icon-wrapper .empty-image-wrapper {
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .item-icon .icon-wrapper .empty-image-wrapper .empty-image {
+  max-width: 100%;
+  display: block;
+  margin: 0px;
+  border: none;
+  padding: 0px;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .item-icon .icon-wrapper .empty-image-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .item-icon .icon-wrapper .protection-image {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .item-icon .icon-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .three-column-item-title {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item h3 {
+  font-family: Agrandir-Regular;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .three-column-icon-message {
+  font-size: 16px;
+  line-height: 20px;
+}
+.one-column-layout .one-column-layout-row div .three-column-icon .three-column-item .three-column-icon-message div p {
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=seventh-placement.css.map */

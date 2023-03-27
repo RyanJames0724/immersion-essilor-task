@@ -1,6 +1,7 @@
+import React from 'react'
 import '../assets/css/fourth-placement.css'
 
-function Placement4() {
+const Placement4: React.FC = () => {
     return (
         <div className='one-column-layout-row main-placement-4'>
             <div>

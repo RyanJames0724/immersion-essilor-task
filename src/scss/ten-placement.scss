@@ -1,0 +1,55 @@
+@use './variables.scss' as *;
+@use './global.scss' as *;
+
+.one-column-layout {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    grid-auto-rows: max-content;
+    width: 100%;
+    margin: 0 auto;
+    background: red;
+
+    .main-placement-10 {
+        grid-row: inherit;
+    }
+
+    .one-column-layout-row {
+        z-index: 1;
+        @include layoutBackground;
+
+        div {
+            .back-to-top {
+                width: 100%;
+                text-transform: uppercase;
+                background-color: #fff;
+
+                .back-to-top-wrapper {
+                    width: calc(100% - 40px);
+                    max-width: 1440px;
+                    margin: auto;
+                    padding: 7px 0;
+
+                    .back-to-top-action {
+                        display: flex;
+                        align-items: center;
+
+                        .back-to-top-arrow-up {
+                            stroke-width: 1;
+                            margin-right: 10px;
+                        }
+
+                        .back-to-top-label {
+                            font-size: 14px;
+                            line-height: 1.2;
+                        }
+
+                        p {
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,9 @@
+import React from 'react'
 import threeGlassLens from '../assets/images/three-glass-lens.webp'
 import sunGlass from '../assets/images/sunglass.webp'
 import '../assets/css/sixth-placement.css'
-function Placement6() {
+
+const Placement6: React.FC = () => {
     return (
         <div className='one-column-layout-row main-placement-6'>
             <div>

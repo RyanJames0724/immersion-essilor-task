@@ -1,9 +1,10 @@
+import React from 'react'
 import '../assets/css/fifth-placement.css'
 import firstSunGlassDrive from '../assets/images/first-sunglass-drive.webp'
 import secondSunGlassDrive from '../assets/images/second-sunglass-drive.webp'
 import thirdSunGlassDrive from '../assets/images/third-sunglass-drive.webp'
 
-function Placement5() {
+const Placement5: React.FC = () => {
     return (
         <div className='one-column-layout-row main-placement-5'>
             <div>

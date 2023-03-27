@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import '../assets/css/third-placement.css'
 import sunWithGlass from '../assets/images/sun-with-glass.webp'
 import sunWithGlassBackground from '../assets/images/sun-with-glass-background.webp'
 
-function Placement3() {
+const Placement3: React.FC = () => {
 
-    const [isHovering, setIsHovering] = useState(false)
+    const [isHovering, setIsHovering] = useState<boolean>(false)
 
     return (
         <div className='one-column-layout-row main-placement-3'>

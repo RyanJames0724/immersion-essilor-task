@@ -26,6 +26,7 @@
   --layered-icon-size: 90px;
   --grid-card-width: 250px;
   --grid-card-gap: 16px;
+  --app-color-dark-grey: #1c1c1c;
 }
 
 * {
@@ -35,7 +36,7 @@
 }
 
 html {
-  font-family: main-font;
+  font-family: Helvetica;
 }
 
 .one-column-layout {

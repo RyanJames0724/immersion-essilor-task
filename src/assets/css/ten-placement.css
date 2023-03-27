@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Agrandir-Thin;
+  src: url("../fonts/Agrandir-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: Agrandir-Regular;
+  src: url("../fonts/Agrandir-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Helvetica;
+  src: url("../fonts/Helvetica.woff");
+}
+@font-face {
+  font-family: main-font;
+  src: url("../fonts/Main-Font.woff2");
+}
+:root {
+  --banner-max-height: 100vh;
+  --banner-min-height: 600px;
+  --gradient-height: 100%;
+  --app-container-width: 1440px;
+  --layered-background: #1c1c1c;
+  --layered-primary-color: #1c1c1c;
+  --layered-secondary-color: #ededf0;
+  --app-color-light-grey: #f3f4f4;
+  --layered-icon-size: 90px;
+  --grid-card-width: 250px;
+  --grid-card-gap: 16px;
+  --app-color-dark-grey: #1c1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Helvetica;
+}
+
+.one-column-layout {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: max-content;
+  grid-auto-rows: max-content;
+  width: 100%;
+  margin: 0 auto;
+  background: red;
+}
+.one-column-layout .main-placement-10 {
+  grid-row: inherit;
+}
+.one-column-layout .one-column-layout-row {
+  z-index: 1;
+  background: #f3f4f4;
+}
+.one-column-layout .one-column-layout-row div .back-to-top {
+  width: 100%;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+.one-column-layout .one-column-layout-row div .back-to-top .back-to-top-wrapper {
+  width: calc(100% - 40px);
+  max-width: 1440px;
+  margin: auto;
+  padding: 7px 0;
+}
+.one-column-layout .one-column-layout-row div .back-to-top .back-to-top-wrapper .back-to-top-action {
+  display: flex;
+  align-items: center;
+}
+.one-column-layout .one-column-layout-row div .back-to-top .back-to-top-wrapper .back-to-top-action .back-to-top-arrow-up {
+  stroke-width: 1;
+  margin-right: 10px;
+}
+.one-column-layout .one-column-layout-row div .back-to-top .back-to-top-wrapper .back-to-top-action .back-to-top-label {
+  font-size: 14px;
+  line-height: 1.2;
+}
+.one-column-layout .one-column-layout-row div .back-to-top .back-to-top-wrapper .back-to-top-action p {
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=ten-placement.css.map */

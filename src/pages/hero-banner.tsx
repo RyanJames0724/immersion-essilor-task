@@ -1,3 +1,4 @@
+import React from 'react';
 import '../assets/css/hero-banner.css'
 import Placement3 from "./third-placement";
 import Placement4 from "./fourth-placement";
@@ -8,9 +9,14 @@ import placement2image1 from '../assets/images/placement-2-image-1.webp'
 import glasses from '../assets/images/glasses.gif'
 import Placement5 from "./fifth-placements";
 import Placement6 from './sixth-placement';
+import Placement7 from './seventh-placement';
+import Placement8 from './eight-placement';
+import Placement9 from './nine-placement';
+import Placement10 from './ten-placement';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const App = () => {
+const App: React.FC = () => {
     return (
         <div className='one-column-layout'>
             <div className='one-column-layout-row main-placement-1'>
@@ -135,6 +141,10 @@ const App = () => {
             <Placement4 />
             <Placement5 />
             <Placement6 />
+            <Placement7 />
+            <Placement8 />
+            <Placement9 />
+            <Placement10 />
         </div >
     )
 }
