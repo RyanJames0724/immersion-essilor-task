@@ -1,14 +1,17 @@
 const mockData = [
     {
         id: 1,
-        placementTitle: "On the road in any day light",
+        placementBackgroundImage: './assets/images/banner-background.webp',
+        placementTitle: "on the road in any",
+        textAfterBreak: "day light.",
         placementButtons: [
             {
                 id: 1,
-                buttonText: "See Drivewear in action"
+                buttonText: "see drivewear",
+                textAfterSup: "in action"
             }
         ],
-        placementParagraph: "Frame by ici berlin - Lenses Transitions Drivewear."
+        placementParagraph: "Frame by ici berlin - Lenses Transitions Drivewear"
     },
     {
         id: 2,

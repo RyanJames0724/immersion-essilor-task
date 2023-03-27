@@ -3,14 +3,17 @@ import express from 'express'
 import { buildSchema } from 'graphql'
 import { graphqlHTTP } from 'express-graphql'
 import mockData from './mock-data.js'
+import cors from 'cors'
 
 const app = express()
 
+app.use(cors())
 
 const schema = buildSchema(`
     type buttonData {
         id: Int
         buttonText: String
+        textAfterSup: String
     }
 
     type imageData {
@@ -19,11 +22,12 @@ const schema = buildSchema(`
     }
 
     type Data {
-        id: Int,
-        placementTitle: String,
+        id: Int
+        placementBackgroundImage: String
+        placementTitle: String
+        textAfterBreak: String
         placementButtons: [buttonData]
         placementParagraph: String
-        imageText: [imageData]
     }
 
     type Query {

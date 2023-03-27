@@ -37,6 +37,7 @@
 
 html {
   font-family: Helvetica;
+  scroll-behavior: smooth;
 }
 
 .one-column-layout {
@@ -201,6 +202,7 @@ html {
   height: 32px;
 }
 .one-column-layout .one-column-layout-row div .generic-row-banner .banner-dark .content-left-bottom h1 {
+  text-transform: uppercase;
   max-width: fit-content;
   font-family: Agrandir-Thin;
   font-weight: 300;
@@ -231,6 +233,7 @@ html {
   flex-shrink: 0;
 }
 .one-column-layout .one-column-layout-row div .generic-row-banner .banner-dark .content-left-bottom .banner-button .square-button .banner-label {
+  font-family: Helvetica;
   padding-top: 6px;
   cursor: pointer;
   font-size: 16px;
@@ -240,7 +243,6 @@ html {
 .one-column-layout .one-column-layout-row div .generic-row-banner .banner-dark .content-left-bottom .banner-button .square-button .banner-label sup {
   font-size: 0.7em;
   position: relative;
-  top: 0.2em;
   line-height: 0;
 }
 .one-column-layout .one-column-layout-row div .generic-row-banner .banner-dark .content-left-bottom .long-text {

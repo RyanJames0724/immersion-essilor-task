@@ -1,5 +1,7 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/hero-banner.css'
+import '../assets/css/style.css'
 import Placement3 from "./third-placement";
 import Placement4 from "./fourth-placement";
 import bannerImage from '../assets/images/banner-background.webp'
@@ -13,10 +15,31 @@ import Placement7 from './seventh-placement';
 import Placement8 from './eight-placement';
 import Placement9 from './nine-placement';
 import Placement10 from './ten-placement';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { gql, useQuery } from '@apollo/client';
 
+const GET_ALL_PLACEMENT_DATA = gql`
+    query GetData{
+        placementData {
+            id
+            placementBackgroundImage
+            placementTitle
+            textAfterBreak
+            placementButtons {
+                id
+                buttonText
+                textAfterSup
+            }
+            placementParagraph
+        }
+    }
+`
 
 const App: React.FC = () => {
+    const { loading, error, data } = useQuery(GET_ALL_PLACEMENT_DATA)
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Error: {error.message}</p>
+    console.log(data.placementData)
+
     return (
         <div className='one-column-layout'>
             <div className='one-column-layout-row main-placement-1'>
@@ -45,10 +68,10 @@ const App: React.FC = () => {
                                     <img src={bannerContentLogo} alt="content logo" loading="lazy" />
                                 </div>
                                 <div className='banner-content-space'></div>
-                                <h1>
-                                    ON THE ROAD IN ANY
-                                    <br />
-                                    DAY LIGHT.
+                                <h1>{
+                                    data.placementData[0].placementTitle}
+                                    < br />
+                                    {data.placementData[0].textAfterBreak}
                                 </h1>
                                 <div className='banner-button'>
                                     <button className='square-button square-button-secondary button-invert-secondary'>
@@ -57,15 +80,15 @@ const App: React.FC = () => {
                                             <polygon points="10 8 16 12 10 16 10 8"></polygon>
                                         </svg>
                                         <label className='banner-label' htmlFor="button-text">
-                                            SEE DRIVEWEAR
+                                            {data.placementData[0].placementButtons[0].buttonText}
                                             <sup>® </sup>
-                                            IN ACTION
+                                            {data.placementData[0].placementButtons[0].textAfterSup}
                                         </label>
                                     </button>
                                 </div>
                                 <div className='long-text'>
                                     <div>
-                                        <p>Frame by ici berlin -Lenses Transitions Drivewear</p>
+                                        <p>{data.placementData[0].placementParagraph}</p>
                                     </div>
                                 </div>
                                 <a className='banner-anchor' href="#">

@@ -37,6 +37,7 @@
 
 html {
   font-family: Helvetica;
+  scroll-behavior: smooth;
 }
 
 .one-column-layout {
