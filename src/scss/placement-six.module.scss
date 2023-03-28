@@ -1,28 +1,28 @@
 @use './variables.scss' as *;
 @use './global.scss' as *;
 
-.main-placement-6 {
+.main_placement_6 {
     grid-row: inherit;
 }
 
-.one-column-layout-row {
+.one_column_layout_row {
     z-index: 1;
     @include layoutBackground;
 
     div {
-        .two-column-drive-banner {
+        .two_column_drive_banner {
             width: 100%;
             height: 100%;
             padding: 0 20px;
             margin-top: 80px;
             margin-bottom: 50px;
 
-            .column-drive-container {
+            .column_drive_container {
                 width: 100%;
                 max-width: 1440px;
                 margin: 0 auto;
 
-                .column-drive-title {
+                .column_drive_title {
                     font-family: Agrandir-Regular;
                     font-size: 28px;
                     font-weight: 400;
@@ -31,7 +31,7 @@
                     text-align: center;
                 }
 
-                .column-drive-subTitle {
+                .column_drive_subTitle {
                     font-family: Helvetica;
                     font-size: 20px;
                     font-weight: 400;
@@ -41,7 +41,7 @@
                     text-align: center;
                 }
 
-                .column-drive-grid {
+                .column_drive_grid {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-column-gap: 16px;
@@ -49,13 +49,13 @@
                     margin-top: 40px;
 
                     div {
-                        .column-drive-box {
+                        .column_drive_box {
                             height: 242px;
                             position: relative;
                             overflow: hidden;
                             background: #fff;
 
-                            .three-lens {
+                            .three_lens {
                                 height: 242px;
                                 width: 242px;
                                 margin: 0 auto;
@@ -67,7 +67,7 @@
                             }
                         }
 
-                        .column-drive-text {
+                        .column_drive_text {
                             text-align: left;
 
                             h2 {
@@ -99,7 +99,7 @@
                                     }
                                 }
 
-                                .default-image {
+                                .default_image {
                                     position: absolute;
                                     bottom: -12px;
                                     right: 200px;
@@ -114,13 +114,13 @@
                     }
 
                     div {
-                        .column-drive-box {
+                        .column_drive_box {
                             height: 242px;
                             position: relative;
                             overflow: hidden;
                             background: #fff;
 
-                            .sun-glass {
+                            .sun_glass {
                                 height: 365px;
                                 width: 360px;
                                 object-fit: none;
@@ -133,7 +133,7 @@
                             }
                         }
 
-                        .column-drive-text {
+                        .column_drive_text {
                             text-align: left;
 
                             h2 {
@@ -165,7 +165,7 @@
                                     }
                                 }
 
-                                .default-image {
+                                .default_image {
                                     position: absolute;
                                     bottom: -12px;
                                     right: 200px;

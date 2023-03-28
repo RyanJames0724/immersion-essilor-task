@@ -1,0 +1,36 @@
+@use './variables.scss' as *;
+@use './global.scss' as *;
+
+.main_placement_8 {
+    grid-row: inherit;
+}
+
+.one_column_layout_row {
+    z-index: 1;
+    @include layoutBackground;
+
+    div {
+        div {
+            .FAQ_container {
+                background-color: #fff;
+                width: 100%;
+                max-width: var(--app-container-width, 1440px);
+                margin: 0 auto 20px;
+                padding: 40px;
+
+                .FAQ_content {
+                    width: 100%;
+                    max-width: 1000px;
+                    margin: 0 auto;
+
+                    .FAQ_title {
+                        font-family: Helvetica;
+                        font-weight: 400;
+                        margin-bottom: 28px;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,19 +1,19 @@
 @use './variables.scss' as *;
 @use './global.scss' as *;
 
-.main-placement-3 {
+.main_placement_3 {
     grid-row: inherit;
 }
 
-.one-column-layout-row {
+.one_column_layout_row {
     z-index: 1;
     @include layoutBackground;
 
     div {
-        .two-layer-card-main {
+        .two_layer_card_main {
             overflow: hidden;
 
-            .card-light-wrapper {
+            .card_light_wrapper {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 16px;
@@ -26,16 +26,16 @@
                 }
 
                 div {
-                    .layer-wrapper {
+                    .layer_wrapper {
                         min-height: 430px;
                     }
 
-                    .layer-banner-wrapper {
+                    .layer_banner_wrapper {
                         height: 400px;
                         position: relative;
                         min-height: 430px;
 
-                        .second-layer {
+                        .second_layer {
                             background: var(--layered-background);
                             position: absolute;
                             top: 0;
@@ -47,14 +47,14 @@
                             transition: 0.4s ease-in-out;
                         }
 
-                        .second-layer-show {
+                        .second_layer_show {
                             opacity: 1;
                         }
 
-                        .second-layer-hide {
+                        .second_layer_hide {
                             opacity: 0;
 
-                            .content-container {
+                            .content_container {
                                 align-items: flex-start;
                                 position: absolute;
                                 top: 50%;
@@ -65,7 +65,7 @@
                                 max-width: 400px;
                                 display: flex;
 
-                                .logo-wrapper {
+                                .logo_wrapper {
                                     background: #fff;
                                     position: relative;
                                     max-width: 130px;
@@ -79,12 +79,12 @@
                                     text-align: center;
                                     justify-content: center;
 
-                                    .icon-wrapper {
+                                    .icon_wrapper {
                                         position: relative;
                                         height: 100%;
                                         width: 100%;
 
-                                        .image-wrapper {
+                                        .image_wrapper {
                                             display: block;
                                             overflow: hidden;
                                             position: absolute;
@@ -92,7 +92,7 @@
                                             box-sizing: border-box;
                                             margin: 0;
 
-                                            .image-sun-glass {
+                                            .image_sun_glass {
                                                 position: absolute;
                                                 inset: 0px;
                                                 box-sizing: border-box;
@@ -109,7 +109,7 @@
                                                 object-fit: contain;
                                             }
 
-                                            img {
+                                            .img {
                                                 width: 100%;
                                                 height: 100%;
                                                 object-fit: contain;
@@ -120,7 +120,7 @@
                                     }
                                 }
 
-                                .layer-banner-content {
+                                .layer_banner_content {
                                     padding: 0 20px;
                                     color: #fff;
                                     transition: 0.4s ease-in-out;
@@ -129,14 +129,14 @@
                                     user-select: none;
                                 }
 
-                                .banner-content-show {
+                                .banner_content_show {
                                     opacity: 1;
                                     transform: translateY(0);
                                     display: flex;
                                     align-items: center;
                                 }
 
-                                .banner-content-hide {
+                                .banner_content_hide {
                                     opacity: 0;
                                     transform: translateY(-50%);
                                     align-items: center;
@@ -154,26 +154,26 @@
                             }
                         }
 
-                        .first-layer-hide {
+                        .first_layer_hide {
                             opacity: 0;
                         }
 
-                        .first-layer-show {
+                        .first_layer_show {
                             opacity: 1;
                         }
 
-                        .first-layer {
+                        .first_layer {
                             position: relative;
                             height: 100%;
                             width: 100%;
                             transition: 0.4s ease-in-out;
 
-                            .background-image {
+                            .background_image {
                                 position: relative;
                                 width: 100%;
                                 height: 100%;
 
-                                .background-wrapper {
+                                .background_wrapper {
                                     display: block;
                                     overflow: hidden;
                                     position: absolute;
@@ -181,7 +181,7 @@
                                     box-sizing: border-box;
                                     margin: 0;
 
-                                    .background-sun-with-glass {
+                                    .background_sun_with_glass {
                                         position: absolute;
                                         inset: 0px;
                                         box-sizing: border-box;
@@ -198,14 +198,14 @@
                                         object-fit: cover;
                                     }
 
-                                    img {
+                                    .img {
                                         max-width: 100%;
                                         display: block;
                                     }
                                 }
                             }
 
-                            .background-video {
+                            .background_video {
                                 position: absolute;
                                 top: 0;
                                 left: 0;
@@ -214,7 +214,7 @@
                                 object-fit: cover;
                             }
 
-                            .content-container {
+                            .content_container {
                                 background: var(--app-color-light-grey);
                                 position: absolute;
                                 top: 50%;
@@ -226,7 +226,7 @@
                                 display: flex;
                                 align-items: center;
 
-                                .logo-wrapper {
+                                .logo_wrapper {
                                     position: relative;
                                     max-width: 130px;
                                     width: 100%;
@@ -242,12 +242,12 @@
                                     text-align: center;
                                     justify-content: center;
 
-                                    .icon-wrapper {
+                                    .icon_wrapper {
                                         position: relative;
                                         height: 100%;
                                         width: 100%;
 
-                                        .image-wrapper {
+                                        .image_wrapper {
                                             display: block;
                                             overflow: hidden;
                                             position: absolute;
@@ -255,7 +255,7 @@
                                             box-sizing: border-box;
                                             margin: 0px;
 
-                                            .sun-with-glass {
+                                            .sun_with_glass {
                                                 position: absolute;
                                                 inset: 0px;
                                                 box-sizing: border-box;
@@ -272,7 +272,7 @@
                                                 object-fit: contain;
                                             }
 
-                                            img {
+                                            .img {
                                                 width: 100%;
                                                 height: 100%;
                                                 object-fit: contain;
@@ -283,7 +283,7 @@
                                     }
                                 }
 
-                                .layer-banner-content {
+                                .layer_banner_content {
                                     padding: 20px;
 
                                     h4 {
@@ -296,12 +296,12 @@
                             }
                         }
 
-                        .state-icon-show {
+                        .state_icon_show {
                             background: var(--layered-secondary-color);
                             color: var(--layered-primary-color);
                         }
 
-                        .state-icon {
+                        .state_icon {
                             position: absolute;
                             right: 0;
                             bottom: 0;

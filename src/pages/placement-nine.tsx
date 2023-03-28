@@ -1,11 +1,11 @@
 import React from 'react'
-import '../scss/style.scss'
+import style from '../scss/style.module.scss'
 
 const Placement9: React.FC = () => {
     return (
-        <div className='one-column-layout-row main-placement-9'>
+        <div className={`${style.one_column_layout_row} ${style.main_placement_9}`}>
             <div>
-                <div className="disclaimer">
+                <div className={style.disclaimer}>
                     <span>
                         <div>
                             <p>1. Source: EcoOptics Limited - Prof. Nicholas Roberts, Quantitative study measuring experimentally how Drivewear increases the achromatic contrast (change in perceived brightness) of moving objects.</p>

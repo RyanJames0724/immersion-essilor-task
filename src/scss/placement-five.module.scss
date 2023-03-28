@@ -1,21 +1,21 @@
 @use './variables.scss' as *;
 @use './global.scss' as *;
 
-.main-placement-5 {
+.main_placement_5 {
     grid-row: inherit;
 }
 
-.one-column-layout-row {
+.one_column_layout_row {
     z-index: 1;
     @include layoutBackground;
 
     div {
-        .three-column-drive-banner {
+        .three_column_drive_banner {
             width: 100%;
             height: 100%;
             padding: 0 20px;
 
-            .column-drive-container {
+            .column_drive_container {
                 max-width: 1440px;
                 margin: 40px auto 0;
 
@@ -28,7 +28,7 @@
                     font-weight: 400;
                 }
 
-                .column-drive-grid {
+                .column_drive_grid {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     grid-column-gap: 16px;
@@ -36,7 +36,7 @@
                     margin-top: 16px;
 
                     div {
-                        .column-drive-box-1 {
+                        .column_drive_box_1 {
                             height: 400px;
                             position: relative;
 
@@ -47,7 +47,7 @@
                                 width: 100%;
                             }
 
-                            .column-drive-box-title-1 {
+                            .column_drive_box_title_1 {
                                 position: absolute;
                                 width: 100%;
                                 height: 74px;
@@ -67,10 +67,10 @@
                             }
                         }
 
-                        .column-drive-content-text {
+                        .column_drive_content_text {
                             margin-top: 16px;
 
-                            .drive-content-title {
+                            .drive_content_title {
                                 color: #1c1c1c;
                                 font-family: Helvetica;
                                 font-size: 28px;
@@ -78,7 +78,7 @@
                                 line-height: 32px;
                             }
 
-                            .drive-content-description {
+                            .drive_content_description {
                                 color: #1c1c1c;
                                 font-size: 16px;
                                 font-family: Helvetica;
@@ -95,7 +95,7 @@
                     }
 
                     div {
-                        .column-drive-box-2 {
+                        .column_drive_box_2 {
                             height: 400px;
                             position: relative;
 
@@ -106,7 +106,7 @@
                                 width: 100%;
                             }
 
-                            .column-drive-box-title-2 {
+                            .column_drive_box_title_2 {
                                 position: absolute;
                                 width: 100%;
                                 height: 74px;
@@ -126,10 +126,10 @@
                             }
                         }
 
-                        .column-drive-content-text {
+                        .column_drive_content_text {
                             margin-top: 16px;
 
-                            .drive-content-title {
+                            .drive_content-title {
                                 color: #1c1c1c;
                                 font-family: Helvetica;
                                 font-size: 28px;
@@ -137,7 +137,7 @@
                                 line-height: 32px;
                             }
 
-                            .drive-content-description {
+                            .drive_content_description {
                                 color: #1c1c1c;
                                 font-size: 16px;
                                 font-family: Helvetica;
@@ -154,7 +154,7 @@
                     }
 
                     div {
-                        .column-drive-box-3 {
+                        .column_drive_box_3 {
                             height: 400px;
                             position: relative;
 
@@ -165,7 +165,7 @@
                                 width: 100%;
                             }
 
-                            .column-drive-box-title-3 {
+                            .column_drive_box_title_3 {
                                 position: absolute;
                                 width: 100%;
                                 height: 74px;
@@ -185,10 +185,10 @@
                             }
                         }
 
-                        .column-drive-content-text {
+                        .column_drive_content_text {
                             margin-top: 16px;
 
-                            .drive-content-title {
+                            .drive_content_title {
                                 color: #1c1c1c;
                                 font-family: Helvetica;
                                 font-size: 28px;
@@ -196,7 +196,7 @@
                                 line-height: 32px;
                             }
 
-                            .drive-content-description {
+                            .drive_content_description {
                                 color: #1c1c1c;
                                 font-size: 16px;
                                 font-family: Helvetica;

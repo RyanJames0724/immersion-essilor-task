@@ -1,11 +1,11 @@
 @use './variables.scss' as *;
 @use './global.scss' as *;
 
-.main-placement-9 {
+.main_placement_9 {
     grid-row: inherit;
 }
 
-.one-column-layout-row {
+.one_column_layout_row {
     z-index: 1;
     @include layoutBackground;
 

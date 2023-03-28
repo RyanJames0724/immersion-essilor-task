@@ -1,7 +1,16 @@
 const mockData = [
     {
         id: 1,
-        placementBackgroundImage: './assets/images/banner-background.webp',
+        images: [
+            {
+                id: 1,
+                imageSrc: './assets/images/placement-one-img/banner-background.webp'
+            },
+            {
+                id: 2,
+                imageSrc: './assets/images/placement-one-img/banner-content-logo.webp'
+            }
+        ],
         placementTitle: "on the road in any",
         textAfterBreak: "day light.",
         placementButtons: [

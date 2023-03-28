@@ -1,36 +1,36 @@
 @use './variables.scss' as *;
 @use './global.scss' as *;
 
-.main-placement-10 {
+.main_placement_10 {
     grid-row: inherit;
 }
 
-.one-column-layout-row {
+.one_column_layout_row {
     z-index: 1;
     @include layoutBackground;
 
     div {
-        .back-to-top {
+        .back_to_top {
             width: 100%;
             text-transform: uppercase;
             background-color: #fff;
 
-            .back-to-top-wrapper {
+            .back_to_top_wrapper {
                 width: calc(100% - 40px);
                 max-width: 1440px;
                 margin: auto;
                 padding: 7px 0;
 
-                .back-to-top-action {
+                .back_to_top_action {
                     display: flex;
                     align-items: center;
 
-                    .back-to-top-arrow-up {
+                    .back_to_top_arrow_up {
                         stroke-width: 1;
                         margin-right: 10px;
                     }
 
-                    .back-to-top-label {
+                    .back_to_top_label {
                         font-size: 14px;
                         line-height: 1.2;
                     }

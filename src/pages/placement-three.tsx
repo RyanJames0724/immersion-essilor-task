@@ -1,33 +1,33 @@
 import React, { useState } from "react";
-import '../scss/style.scss'
-import sunWithGlass from '../assets/images/sun-with-glass.webp'
-import sunWithGlassBackground from '../assets/images/sun-with-glass-background.webp'
+import style from '../scss/style.module.scss'
+import sunWithGlass from '../assets/images/placement-three-img/animation-one/sun-with-glass.webp'
+import sunWithGlassBackground from '../assets/images/placement-three-img/animation-one/sun-with-glass-background.webp'
 
 const Placement3: React.FC = () => {
 
     const [isHovering, setIsHovering] = useState<boolean>(false)
 
     return (
-        <div className='one-column-layout-row main-placement-3'>
+        <div className={`${style.one_column_layout_row} ${style.main_placement_3}`}>
             <div>
-                <div className='two-layer-card-main'>
-                    <div className='card-light-wrapper'>
+                <div className={style.two_layer_card_main}>
+                    <div className={style.card_light_wrapper}>
                         <div>
-                            <div className='layer-banner-wrapper layer-wrapper'>
+                            <div className={`${style.layer_banner_wrapper} ${style.layer_wrapper}`}>
                                 <div
-                                    className={`second-layer ${isHovering ? 'second-layer-show' : 'second-layer-hide'}`}
+                                    className={`${style.second_layer} ${isHovering ? style.second_layer_show : style.second_layer_hide}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
-                                    <div className="content-container">
-                                        <div className='logo-wrapper'>
-                                            <div className='icon-wrapper'>
-                                                <div className='image-wrapper'>
-                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className='image-sun-glass' />
+                                    <div className={style.content_container}>
+                                        <div className={style.logo_wrapper}>
+                                            <div className={style.icon_wrapper}>
+                                                <div className={style.image_wrapper}>
+                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className={`layer-banner-content ${isHovering ? 'banner-content-show' : 'banner-content-hide'}`}
+                                        <div className={`${style.layer_banner_content} ${isHovering ? style.banner_content_show : style.banner_content_hide}`}
                                             onMouseEnter={() => setIsHovering(true)}
                                             onMouseLeave={() => setIsHovering(false)}
                                         >
@@ -40,34 +40,34 @@ const Placement3: React.FC = () => {
                                     </div>
                                 </div>
                                 <div
-                                    className={`first-layer ${isHovering ? 'first-layer-hide' : 'first-layer-show'}`}
+                                    className={`${style.first_layer} ${isHovering ? style.first_layer_hide : style.first_layer_show}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
-                                    <div className='background-image'>
-                                        <div className='background-wrapper'>
-                                            <img src={sunWithGlassBackground} alt="An empty way" className='background-sun-with-glass' />
+                                    <div className={style.background_image}>
+                                        <div className={style.background_wrapper}>
+                                            <img src={sunWithGlassBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
                                         </div>
                                     </div>
-                                    <video loop className="background-video" preload="none" playsInline>
+                                    <video loop className={style.background_video} preload="none" playsInline>
                                         <source src="" type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
-                                    <div className='content-container'>
-                                        <div className='logo-wrapper'>
-                                            <div className='icon-wrapper'>
-                                                <div className='image-wrapper'>
-                                                    <img src={sunWithGlass} alt="sun with glass" className='sun-with-glass' />
+                                    <div className={style.content_container}>
+                                        <div className={style.logo_wrapper}>
+                                            <div className={style.icon_wrapper}>
+                                                <div className={style.image_wrapper}>
+                                                    <img src={sunWithGlass} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='layer-banner-content'>
+                                        <div className={style.layer_banner_content}>
                                             <h4>COLOUR VARIES WITH LIGHT INTENSITY</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div
-                                    className={`state-icon ${isHovering ? 'state-icon-show' : ''}`}
+                                    className={`${style.state_icon} ${isHovering ? style.state_icon_show : ''}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
@@ -78,21 +78,21 @@ const Placement3: React.FC = () => {
 
 
                         <div>
-                            <div className='layer-banner-wrapper layer-wrapper'>
+                            <div className={`${style.layer_banner_wrapper} ${style.layer_wrapper}`}>
                                 <div
-                                    className={`second-layer ${isHovering ? 'second-layer-show' : 'second-layer-hide'}`}
+                                    className={`${style.second_layer} ${isHovering ? style.second_layer_show : style.second_layer_hide}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
-                                    <div className="content-container">
-                                        <div className='logo-wrapper'>
-                                            <div className='icon-wrapper'>
-                                                <div className='image-wrapper'>
-                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className='image-sun-glass' />
+                                    <div className={style.content_container}>
+                                        <div className={style.logo_wrapper}>
+                                            <div className={style.icon_wrapper}>
+                                                <div className={style.image_wrapper}>
+                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className={`layer-banner-content ${isHovering ? 'banner-content-show' : 'banner-content-hide'}`}
+                                        <div className={`${style.layer_banner_content} ${isHovering ? style.banner_content_show : style.banner_content_hide}`}
                                             onMouseEnter={() => setIsHovering(true)}
                                             onMouseLeave={() => setIsHovering(false)}
                                         >
@@ -105,34 +105,34 @@ const Placement3: React.FC = () => {
                                     </div>
                                 </div>
                                 <div
-                                    className={`first-layer ${isHovering ? 'first-layer-hide' : 'first-layer-show'}`}
+                                    className={`${style.first_layer} ${isHovering ? style.first_layer_hide : style.first_layer_show}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
-                                    <div className='background-image'>
-                                        <div className='background-wrapper'>
-                                            <img src={sunWithGlassBackground} alt="An empty way" className='background-sun-with-glass' />
+                                    <div className={style.background_image}>
+                                        <div className={style.background_wrapper}>
+                                            <img src={sunWithGlassBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
                                         </div>
                                     </div>
-                                    <video loop className="background-video" preload="none" playsInline>
+                                    <video loop className={style.background_video} preload="none" playsInline>
                                         <source src="" type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
-                                    <div className='content-container'>
-                                        <div className='logo-wrapper'>
-                                            <div className='icon-wrapper'>
-                                                <div className='image-wrapper'>
-                                                    <img src={sunWithGlass} alt="sun with glass" className='sun-with-glass' />
+                                    <div className={style.content_container}>
+                                        <div className={style.logo_wrapper}>
+                                            <div className={style.icon_wrapper}>
+                                                <div className={style.image_wrapper}>
+                                                    <img src={sunWithGlass} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='layer-banner-content'>
+                                        <div className={style.layer_banner_content}>
                                             <h4>COLOUR VARIES WITH LIGHT INTENSITY</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div
-                                    className={`state-icon ${isHovering ? 'state-icon-show' : ''}`}
+                                    className={`${style.state_icon} ${isHovering ? style.state_icon_show : ''}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
@@ -143,21 +143,21 @@ const Placement3: React.FC = () => {
 
 
                         <div>
-                            <div className='layer-banner-wrapper layer-wrapper'>
+                            <div className={`${style.layer_banner_wrapper} ${style.layer_wrapper}`}>
                                 <div
-                                    className={`second-layer ${isHovering ? 'second-layer-show' : 'second-layer-hide'}`}
+                                    className={`${style.second_layer} ${isHovering ? style.second_layer_show : style.second_layer_hide}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
-                                    <div className="content-container">
-                                        <div className='logo-wrapper'>
-                                            <div className='icon-wrapper'>
-                                                <div className='image-wrapper'>
-                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className='image-sun-glass' />
+                                    <div className={style.content_container}>
+                                        <div className={style.logo_wrapper}>
+                                            <div className={style.icon_wrapper}>
+                                                <div className={style.image_wrapper}>
+                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className={`layer-banner-content ${isHovering ? 'banner-content-show' : 'banner-content-hide'}`}
+                                        <div className={`${style.layer_banner_content} ${isHovering ? style.banner_content_show : style.banner_content_hide}`}
                                             onMouseEnter={() => setIsHovering(true)}
                                             onMouseLeave={() => setIsHovering(false)}
                                         >
@@ -170,34 +170,34 @@ const Placement3: React.FC = () => {
                                     </div>
                                 </div>
                                 <div
-                                    className={`first-layer ${isHovering ? 'first-layer-hide' : 'first-layer-show'}`}
+                                    className={`${style.first_layer} ${isHovering ? style.first_layer_hide : style.first_layer_show}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
-                                    <div className='background-image'>
-                                        <div className='background-wrapper'>
-                                            <img src={sunWithGlassBackground} alt="An empty way" className='background-sun-with-glass' />
+                                    <div className={style.background_image}>
+                                        <div className={style.background_wrapper}>
+                                            <img src={sunWithGlassBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
                                         </div>
                                     </div>
-                                    <video loop className="background-video" preload="none" playsInline>
+                                    <video loop className={style.background_video} preload="none" playsInline>
                                         <source src="" type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
-                                    <div className='content-container'>
-                                        <div className='logo-wrapper'>
-                                            <div className='icon-wrapper'>
-                                                <div className='image-wrapper'>
-                                                    <img src={sunWithGlass} alt="sun with glass" className='sun-with-glass' />
+                                    <div className={style.content_container}>
+                                        <div className={style.logo_wrapper}>
+                                            <div className={style.icon_wrapper}>
+                                                <div className={style.image_wrapper}>
+                                                    <img src={sunWithGlass} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='layer-banner-content'>
+                                        <div className={style.layer_banner_content}>
                                             <h4>COLOUR VARIES WITH LIGHT INTENSITY</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div
-                                    className={`state-icon ${isHovering ? 'state-icon-show' : ''}`}
+                                    className={`${style.state_icon} ${isHovering ? style.state_icon_show : ''}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
@@ -208,21 +208,21 @@ const Placement3: React.FC = () => {
 
 
                         <div>
-                            <div className='layer-banner-wrapper layer-wrapper'>
+                            <div className={`${style.layer_banner_wrapper} ${style.layer_wrapper}`}>
                                 <div
-                                    className={`second-layer ${isHovering ? 'second-layer-show' : 'second-layer-hide'}`}
+                                    className={`${style.second_layer} ${isHovering ? style.second_layer_show : style.second_layer_hide}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
-                                    <div className="content-container">
-                                        <div className='logo-wrapper'>
-                                            <div className='icon-wrapper'>
-                                                <div className='image-wrapper'>
-                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className='image-sun-glass' />
+                                    <div className={style.content_container}>
+                                        <div className={style.logo_wrapper}>
+                                            <div className={style.icon_wrapper}>
+                                                <div className={style.image_wrapper}>
+                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className={`layer-banner-content ${isHovering ? 'banner-content-show' : 'banner-content-hide'}`}
+                                        <div className={`${style.layer_banner_content} ${isHovering ? style.banner_content_show : style.banner_content_hide}`}
                                             onMouseEnter={() => setIsHovering(true)}
                                             onMouseLeave={() => setIsHovering(false)}
                                         >
@@ -235,34 +235,34 @@ const Placement3: React.FC = () => {
                                     </div>
                                 </div>
                                 <div
-                                    className={`first-layer ${isHovering ? 'first-layer-hide' : 'first-layer-show'}`}
+                                    className={`${style.first_layer} ${isHovering ? style.first_layer_hide : style.first_layer_show}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >
-                                    <div className='background-image'>
-                                        <div className='background-wrapper'>
-                                            <img src={sunWithGlassBackground} alt="An empty way" className='background-sun-with-glass' />
+                                    <div className={style.background_image}>
+                                        <div className={style.background_wrapper}>
+                                            <img src={sunWithGlassBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
                                         </div>
                                     </div>
-                                    <video loop className="background-video" preload="none" playsInline>
+                                    <video loop className={style.background_video} preload="none" playsInline>
                                         <source src="" type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
-                                    <div className='content-container'>
-                                        <div className='logo-wrapper'>
-                                            <div className='icon-wrapper'>
-                                                <div className='image-wrapper'>
-                                                    <img src={sunWithGlass} alt="sun with glass" className='sun-with-glass' />
+                                    <div className={style.content_container}>
+                                        <div className={style.logo_wrapper}>
+                                            <div className={style.icon_wrapper}>
+                                                <div className={style.image_wrapper}>
+                                                    <img src={sunWithGlass} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='layer-banner-content'>
+                                        <div className={style.layer_banner_content}>
                                             <h4>COLOUR VARIES WITH LIGHT INTENSITY</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div
-                                    className={`state-icon ${isHovering ? 'state-icon-show' : ''}`}
+                                    className={`${style.state_icon} ${isHovering ? style.state_icon_show : ''}`}
                                     onMouseEnter={() => setIsHovering(true)}
                                     onMouseLeave={() => setIsHovering(false)}
                                 >

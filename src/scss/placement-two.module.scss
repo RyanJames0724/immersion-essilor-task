@@ -1,24 +1,24 @@
 @use "./variables.scss" as *;
 @use './global.scss' as *;
 
-.main-placement-2 {
+.main_placement_2 {
     grid-row: inherit;
 }
 
-.one-column-layout-row {
+.one_column_layout_row {
     z-index: 1;
     @include layoutBackground;
 
     div {
-        .animated-details-light-main-white {
+        .animated_details_light_main_white {
             @include layoutBackground;
         }
 
-        .animated-details-light-main {
+        .animated_details_light_main {
             padding: 63px 0;
             color: #fff;
 
-            .animated-details-main {
+            .animated_details_main {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 20px;
@@ -28,16 +28,16 @@
                 padding: 0 0 0 20px;
                 overflow: hidden;
 
-                .animated-details-1 {
+                .animated_details_1 {
                     max-width: 465px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
 
-                    .animated-details-logo {
+                    .animated_details_logo {
                         margin-bottom: 40px;
 
-                        .logo-wrapper {
+                        .logo_wrapper {
                             display: inline-block;
                             max-width: 100%;
                             overflow: hidden;
@@ -45,7 +45,7 @@
                             box-sizing: border-box;
                             margin: 0px;
 
-                            .wrapper-image {
+                            .wrapper_image {
                                 box-sizing: border-box;
                                 display: block;
                                 max-width: 100%;
@@ -59,7 +59,7 @@
                                 }
                             }
 
-                            .logo-style {
+                            .logo_style {
                                 position: absolute;
                                 inset: 0px;
                                 box-sizing: border-box;
@@ -83,11 +83,11 @@
                         }
                     }
 
-                    .animated-details-title {
+                    .animated_details_title {
                         margin-bottom: 20px;
                     }
 
-                    .animated-details-light-main-white1 {
+                    .animated_details_light_main_white1 {
                         color: #1c1c1c;
 
                         h4 {
@@ -98,11 +98,11 @@
                         }
                     }
 
-                    .animated-details-light-main-white1 {
+                    .animated_details_light_main_white1 {
                         color: #1c1c1c;
                     }
 
-                    .animated-details-long-text {
+                    .animated_details_long_text {
                         font-size: 20px;
                         line-height: 1.4em;
                         letter-spacing: -0.1px;
@@ -123,15 +123,15 @@
                     }
                 }
 
-                .animated-details-2 {
+                .animated_details_2 {
                     width: fit-content;
                     margin-right: 95px;
                     padding: 60px 0 200px;
 
-                    .animated-details-row1 {
+                    .animated_details_row1 {
                         display: flex;
 
-                        .first-image-wrapper {
+                        .first_image_wrapper {
                             display: inline-block;
                             max-width: 100%;
                             overflow: hidden;
@@ -139,12 +139,12 @@
                             box-sizing: border-box;
                             margin: 0px;
 
-                            .wrapper-image {
+                            .wrapper_image {
                                 box-sizing: border-box;
                                 display: block;
                                 max-width: 100%;
 
-                                .first-image-wrapper {
+                                .first_image_wrapper {
                                     max-width: 100%;
                                     display: block;
                                     margin: 0px;
@@ -158,7 +158,7 @@
                                 }
                             }
 
-                            .first-image-style {
+                            .first_image_style {
                                 position: absolute;
                                 inset: 0px;
                                 box-sizing: border-box;
@@ -182,10 +182,10 @@
                         }
                     }
 
-                    .animated-details-row2 {
+                    .animated_details_row2 {
                         display: flex;
 
-                        .animated-details-gear {
+                        .animated_details_gear {
                             width: 100;
                             display: flex;
                             align-items: center;
@@ -199,7 +199,7 @@
                             visibility: hidden;
                         }
 
-                        .animated-details-glasses {
+                        .animated_details_glasses {
                             position: relative;
                             height: 100%;
                             width: 100%;
@@ -207,17 +207,17 @@
                             transition: all 1.5s ease-in-out 0s;
                             transform: translateX(0%);
 
-                            .animated-details-light-main-white1 {
+                            .animated_details_light_main_white1 {
                                 @include layoutBackground;
                             }
 
-                            .animated-details-frame {
+                            .animated_details_frame {
                                 position: absolute;
                                 display: flex;
                                 top: 0;
                                 left: 0;
 
-                                .glass-image-wrapper {
+                                .glass_image_wrapper {
                                     display: inline-block;
                                     max-width: 100%;
                                     overflow: hidden;
@@ -225,12 +225,12 @@
                                     box-sizing: border-box;
                                     margin: 0px;
 
-                                    .wrapper-image {
+                                    .wrapper_image {
                                         box-sizing: border-box;
                                         display: block;
                                         max-width: 100%;
 
-                                        .glass-image-wrapper {
+                                        .glass_image_wrapper {
                                             max-width: 100%;
                                             display: block;
                                             margin: 0px;
@@ -244,7 +244,7 @@
                                         }
                                     }
 
-                                    .glass-image {
+                                    .glass_image {
                                         position: absolute;
                                         inset: 0px;
                                         box-sizing: border-box;
@@ -268,7 +268,7 @@
                                 }
                             }
 
-                            .animated-details-lens {
+                            .animated_details_lens {
                                 position: absolute;
                                 display: flex;
                                 top: 0;

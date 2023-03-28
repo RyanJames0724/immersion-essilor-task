@@ -9,10 +9,11 @@ import PlacementSeven from './pages/placement-seven';
 import PlacementEight from './pages/placement-eight';
 import PlacementNine from './pages/placement-nine';
 import PlacementTen from './pages/placement-ten';
+import style from './scss/style.module.scss'
 
-const App = () => {
+const App: React.FC = () => {
     return (
-        <div className='one-column-layout'>
+        <div className={style.one_column_layout}>
             <PlacementOne />
             <PlacementTwo />
             <PlacementThree />

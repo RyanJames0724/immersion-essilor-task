@@ -1,21 +1,21 @@
 @use './variables.scss' as *;
 @use './global.scss' as *;
 
-.main-placement-4 {
+.main_placement_4 {
     grid-row: inherit;
 }
 
-.one-column-layout-row {
+.one_column_layout_row {
     z-index: 1;
     @include layoutBackground;
 
     div {
-        .three-static-card-dark {
+        .three_static_card_dark {
             max-width: calc(var(--app-container-width) + 40px);
             padding: 0 20px;
             margin: 20px auto;
 
-            .card-long-text {
+            .card_long_text {
                 font-family: Helvetica;
                 font-size: 24px;
                 margin-bottom: 16px;
@@ -25,7 +25,7 @@
                 }
             }
 
-            .three-card-main {
+            .three_card_main {
                 display: grid;
                 grid-template-columns: repeat(auto-fit,
                         minmax(var(--grid-card-width), 1fr));
@@ -38,15 +38,15 @@
                     transform: translateY(0px);
                 }
 
-                .static-dark-card:not(:last-of-type) {
+                .static_dark_card:not(:last-of-type) {
                     margin-right: 16px;
                 }
 
-                .dark-card-brown {
+                .dark_card_brown {
                     background-color: #7f4006;
                 }
 
-                .static-dark-card::before {
+                .static_dark_card::before {
                     content: "";
                     height: 1px;
                     max-width: 50px;
@@ -55,7 +55,7 @@
                     margin-bottom: 40px;
                 }
 
-                .static-dark-card::after {
+                .static_dark_card::after {
                     content: "";
                     height: 1px;
                     max-width: 50px;
@@ -64,7 +64,7 @@
                     margin-top: 40px;
                 }
 
-                .static-dark-card {
+                .static_dark_card {
                     width: 100%;
                     min-height: 400px;
                     // background-color: var(--app-color-dark-grey);
@@ -80,13 +80,13 @@
                     flex-direction: column;
 
                     div {
-                        .static-card-header {
+                        .static_card_header {
                             font-size: 80px;
                             font-family: Agrandir-Regular;
                             font-weight: 300;
                         }
 
-                        .static-dark-content {
+                        .static_dark_content {
                             font-size: 24px;
                             font-family: Helvetica;
                             max-width: 315px;

@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../scss/style.scss'
-import bannerImage from '../assets/images/banner-background.webp'
-import bannerContentLogo from '../assets/images/banner-content-logo.webp'
+import style from '../scss/style.module.scss'
+import bannerImage from '../assets/images/placement-one-img/banner-background.webp'
+import bannerContentLogo from '../assets/images/placement-one-img/banner-content-logo.webp'
 import { gql, useQuery } from '@apollo/client';
 
 const GET_ALL_PLACEMENT_DATA = gql`
@@ -29,69 +29,67 @@ const PlacementOne: React.FC = () => {
     console.log(data.placementData)
 
     return (
-        <div className='one-column-layout'>
-            <div className='one-column-layout-row main-placement-1'>
-                <div>
-                    <div className='generic-row-banner'>
-                        <div className='banner-wrapper banner-dark'>
-                            <div className='banner-background background'>
-                                <div className='background-wrapper'>
-                                    <div className='image-holder'>
-                                        <img src={bannerImage} alt="front background" loading="lazy" className='hero-banner-background' />
-                                    </div>
+        <div className={`${style.one_column_layout_row} ${style.main_placement_1}`}>
+            <div>
+                <div className={style.generic_row_banner}>
+                    <div className={`${style.banner_wrapper} ${style.banner_dark}`}>
+                        <div className={`${style.banner_background} ${style.background}`}>
+                            <div className={style.background_wrapper}>
+                                <div className={style.image_holder}>
+                                    <img src={bannerImage} alt="front background" loading="lazy" className={style.hero_banner_background} />
                                 </div>
                             </div>
-                            <div className='side-colors banner-gradient'>
-                                <div className="gradient1"></div>
-                                <div className="gradient2"></div>
-                                <div className="gradient3"></div>
-                                <div className="gradient4"></div>
-                                <div className="gradient5"></div>
-                                <div className="gradient6"></div>
-                                <div className="gradient7"></div>
-                                <div className="gradient8"></div>
+                        </div>
+                        <div className={style.banner_gradient}>
+                            <div className={style.gradient_1}></div>
+                            <div className={style.gradient_2}></div>
+                            <div className={style.gradient_3}></div>
+                            <div className={style.gradient_4}></div>
+                            <div className={style.gradient_5}></div>
+                            <div className={style.gradient_6}></div>
+                            <div className={style.gradient_7}></div>
+                            <div className={style.gradient_8}></div>
+                        </div>
+                        <div className={style.content_left_bottom}>
+                            <div className={style.banner_content_logo}>
+                                <img src={bannerContentLogo} alt="content logo" loading="lazy" className={style.img} />
                             </div>
-                            <div className='content-left-bottom content-banner-fixed'>
-                                <div className='banner-content-logo'>
-                                    <img src={bannerContentLogo} alt="content logo" loading="lazy" />
-                                </div>
-                                <div className='banner-content-space'></div>
-                                <h1>{
-                                    data.placementData[0].placementTitle}
-                                    < br />
-                                    {data.placementData[0].textAfterBreak}
-                                </h1>
-                                <div className='banner-button'>
-                                    <button className='square-button square-button-secondary button-invert-secondary'>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                                        </svg>
-                                        <label className='banner-label' htmlFor="button-text">
-                                            {data.placementData[0].placementButtons[0].buttonText}
-                                            <sup>® </sup>
-                                            {data.placementData[0].placementButtons[0].textAfterSup}
-                                        </label>
-                                    </button>
-                                </div>
-                                <div className='long-text'>
-                                    <div>
-                                        <p>{data.placementData[0].placementParagraph}</p>
-                                    </div>
-                                </div>
-                                <a className='banner-anchor' href="#">
-                                    <div className="icon-arrow-bottom icon-arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1px" strokeLinecap="round" strokeLinejoin="round">
-                                            <polyline points="6 9 12 15 18 9"></polyline>
-                                        </svg>
-                                    </div>
-                                </a>
+                            <div className={style.banner_content_space}></div>
+                            <h1 className={style.h1}>{
+                                data.placementData[0].placementTitle}
+                                < br />
+                                {data.placementData[0].textAfterBreak}
+                            </h1>
+                            <div className={style.banner_button}>
+                                <button className={style.square_button}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={style.svg}>
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg>
+                                    <label className={style.banner_label} htmlFor="button-text">
+                                        {data.placementData[0].placementButtons[0].buttonText}
+                                        <sup className={style.sup}>® </sup>
+                                        {data.placementData[0].placementButtons[0].textAfterSup}
+                                    </label>
+                                </button>
                             </div>
+                            <div className={style.long_text}>
+                                <div>
+                                    <p>{data.placementData[0].placementParagraph}</p>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div className={`${style.icon_arrow_bottom} ${style.icon_arrow}`}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1px" strokeLinecap="round" strokeLinejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 
