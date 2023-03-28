@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/css/placement-one.css'
-import '../assets/css/style.css'
+import '../scss/style.scss'
 import bannerImage from '../assets/images/banner-background.webp'
 import bannerContentLogo from '../assets/images/banner-content-logo.webp'
 import { gql, useQuery } from '@apollo/client';

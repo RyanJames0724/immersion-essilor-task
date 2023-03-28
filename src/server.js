@@ -1,5 +1,4 @@
 import express from 'express'
-// import axios from 'axios'
 import { buildSchema } from 'graphql'
 import { graphqlHTTP } from 'express-graphql'
 import mockData from './mock-data.js'
@@ -31,16 +30,11 @@ const schema = buildSchema(`
     }
 
     type Query {
-        hello: String
         placementData: [Data]
     }
 `)
 
 const root = {
-    hello: () => {
-        return "Hello World"
-    },
-
     placementData: () => {
         return mockData
     }

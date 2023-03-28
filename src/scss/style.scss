@@ -1,1 +1,20 @@
-@use './custom'
+@use './custom';
+@use './placement-one.scss';
+@use './placement-two.scss';
+@use './placement-three.scss';
+@use './placement-four.scss';
+@use './placement-five.scss';
+@use './placement-six.scss';
+@use './placement-seven.scss';
+@use './placement-eight.scss';
+@use './placement-nine.scss';
+@use './placement-ten.scss';
+
+.one-column-layout {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    grid-auto-rows: max-content;
+    width: 100%;
+    margin: 0 auto;
+}

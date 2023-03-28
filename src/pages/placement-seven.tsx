@@ -1,5 +1,5 @@
 import React from "react";
-import '../assets/css/seventh-placement.css'
+import '../scss/style.scss'
 import protectionImage from '../assets/images/protection-image.webp'
 import comfortImage from '../assets/images/comfort-image.webp'
 import visionImage from '../assets/images/vision-image.webp'

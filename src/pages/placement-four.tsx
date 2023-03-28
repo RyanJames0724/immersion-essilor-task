@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/css/fourth-placement.css'
+import '../scss/style.scss'
 
 const Placement4: React.FC = () => {
     return (

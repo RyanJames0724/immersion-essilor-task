@@ -1,5 +1,5 @@
 import React from "react";
-import '../assets/css/placement-two.css'
+import '../scss/style.scss'
 import animatedLogo from '../assets/images/animated-details-logo.webp'
 import placement2image1 from '../assets/images/placement-2-image-1.webp'
 import glasses from '../assets/images/glasses.gif'

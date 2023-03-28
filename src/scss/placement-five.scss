@@ -1,0 +1,218 @@
+@use './variables.scss' as *;
+@use './global.scss' as *;
+
+.main-placement-5 {
+    grid-row: inherit;
+}
+
+.one-column-layout-row {
+    z-index: 1;
+    @include layoutBackground;
+
+    div {
+        .three-column-drive-banner {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+
+            .column-drive-container {
+                max-width: 1440px;
+                margin: 40px auto 0;
+
+                h2 {
+                    color: #1c1c1c;
+                    font-family: Agrandir-Regular;
+                    font-size: 28px;
+                    text-transform: uppercase;
+                    line-height: 32px;
+                    font-weight: 400;
+                }
+
+                .column-drive-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-column-gap: 16px;
+                    grid-gap: 16px;
+                    margin-top: 16px;
+
+                    div {
+                        .column-drive-box-1 {
+                            height: 400px;
+                            position: relative;
+
+                            img {
+                                position: absolute;
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+
+                            .column-drive-box-title-1 {
+                                position: absolute;
+                                width: 100%;
+                                height: 74px;
+                                background-color: #776f1a;
+                                padding: 30px 0 30px 30px;
+                                opacity: 80%;
+
+                                span {
+                                    text-transform: uppercase;
+                                    font-family: Agrandir-Regular;
+                                    font-size: 22px;
+                                    color: #fff;
+                                    line-height: 28px;
+                                    text-transform: uppercase;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+
+                        .column-drive-content-text {
+                            margin-top: 16px;
+
+                            .drive-content-title {
+                                color: #1c1c1c;
+                                font-family: Helvetica;
+                                font-size: 28px;
+                                text-transform: capitalize;
+                                line-height: 32px;
+                            }
+
+                            .drive-content-description {
+                                color: #1c1c1c;
+                                font-size: 16px;
+                                font-family: Helvetica;
+                                letter-spacing: -0.08px;
+                                line-height: 22px;
+
+                                div {
+                                    p {
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    div {
+                        .column-drive-box-2 {
+                            height: 400px;
+                            position: relative;
+
+                            img {
+                                position: absolute;
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+
+                            .column-drive-box-title-2 {
+                                position: absolute;
+                                width: 100%;
+                                height: 74px;
+                                background-color: #855936;
+                                padding: 30px 0 30px 30px;
+                                opacity: 80%;
+
+                                span {
+                                    text-transform: uppercase;
+                                    font-family: Agrandir-Regular;
+                                    font-size: 22px;
+                                    color: #fff;
+                                    line-height: 28px;
+                                    text-transform: uppercase;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+
+                        .column-drive-content-text {
+                            margin-top: 16px;
+
+                            .drive-content-title {
+                                color: #1c1c1c;
+                                font-family: Helvetica;
+                                font-size: 28px;
+                                text-transform: capitalize;
+                                line-height: 32px;
+                            }
+
+                            .drive-content-description {
+                                color: #1c1c1c;
+                                font-size: 16px;
+                                font-family: Helvetica;
+                                letter-spacing: -0.08px;
+                                line-height: 22px;
+
+                                div {
+                                    p {
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    div {
+                        .column-drive-box-3 {
+                            height: 400px;
+                            position: relative;
+
+                            img {
+                                position: absolute;
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+
+                            .column-drive-box-title-3 {
+                                position: absolute;
+                                width: 100%;
+                                height: 74px;
+                                background-color: #4E2E13;
+                                padding: 30px 0 30px 30px;
+                                opacity: 80%;
+
+                                span {
+                                    text-transform: uppercase;
+                                    font-family: Agrandir-Regular;
+                                    font-size: 22px;
+                                    color: #fff;
+                                    line-height: 28px;
+                                    text-transform: uppercase;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+
+                        .column-drive-content-text {
+                            margin-top: 16px;
+
+                            .drive-content-title {
+                                color: #1c1c1c;
+                                font-family: Helvetica;
+                                font-size: 28px;
+                                text-transform: capitalize;
+                                line-height: 32px;
+                            }
+
+                            .drive-content-description {
+                                color: #1c1c1c;
+                                font-size: 16px;
+                                font-family: Helvetica;
+                                letter-spacing: -0.08px;
+                                line-height: 22px;
+
+                                div {
+                                    p {
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

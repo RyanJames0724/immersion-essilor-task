@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../assets/css/third-placement.css'
+import '../scss/style.scss'
 import sunWithGlass from '../assets/images/sun-with-glass.webp'
 import sunWithGlassBackground from '../assets/images/sun-with-glass-background.webp'
 

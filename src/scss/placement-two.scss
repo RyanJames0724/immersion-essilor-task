@@ -1,273 +1,241 @@
 @use "./variables.scss" as *;
 @use './global.scss' as *;
 
-.one-column-layout {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: max-content;
-    grid-auto-rows: max-content;
-    width: 100%;
-    margin: 0 auto;
-    background: red;
+.main-placement-2 {
+    grid-row: inherit;
+}
 
-    .main-placement-2 {
-        grid-row: 2/2;
-        z-index: 1;
-    }
+.one-column-layout-row {
+    z-index: 1;
+    @include layoutBackground;
 
-    .one-column-layout-row {
-        @include layoutBackground;
+    div {
+        .animated-details-light-main-white {
+            @include layoutBackground;
+        }
 
-        div {
-            .animated-details-light-main-white {
-                @include layoutBackground;
-            }
+        .animated-details-light-main {
+            padding: 63px 0;
+            color: #fff;
 
-            .animated-details-light-main {
-                padding: 63px 0;
-                color: #fff;
+            .animated-details-main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+                gap: 20px;
+                max-width: calc(var(--app-container-width) + 40px);
+                margin: auto;
+                padding: 0 0 0 20px;
+                overflow: hidden;
 
-                .animated-details-main {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-gap: 20px;
-                    gap: 20px;
-                    max-width: calc(var(--app-container-width) + 40px);
-                    margin: auto;
-                    padding: 0 0 0 20px;
-                    overflow: hidden;
+                .animated-details-1 {
+                    max-width: 465px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
 
-                    .animated-details-1 {
-                        max-width: 465px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
+                    .animated-details-logo {
+                        margin-bottom: 40px;
 
-                        .animated-details-logo {
-                            margin-bottom: 40px;
+                        .logo-wrapper {
+                            display: inline-block;
+                            max-width: 100%;
+                            overflow: hidden;
+                            position: relative;
+                            box-sizing: border-box;
+                            margin: 0px;
 
-                            .logo-wrapper {
-                                display: inline-block;
-                                max-width: 100%;
-                                overflow: hidden;
-                                position: relative;
+                            .wrapper-image {
                                 box-sizing: border-box;
-                                margin: 0px;
-
-                                .wrapper-image {
-                                    box-sizing: border-box;
-                                    display: block;
-                                    max-width: 100%;
-
-                                    img {
-                                        max-width: 100%;
-                                        display: block;
-                                        margin: 0px;
-                                        border: none;
-                                        padding: 0px;
-                                    }
-                                }
-
-                                .logo-style {
-                                    position: absolute;
-                                    inset: 0px;
-                                    box-sizing: border-box;
-                                    padding: 0px;
-                                    border: none;
-                                    margin: auto;
-                                    display: block;
-                                    width: 0px;
-                                    height: 0px;
-                                    min-width: 100%;
-                                    max-width: 100%;
-                                    min-height: 100%;
-                                    max-height: 100%;
-                                    object-fit: contain;
-                                }
+                                display: block;
+                                max-width: 100%;
 
                                 img {
-                                    display: block;
                                     max-width: 100%;
+                                    display: block;
+                                    margin: 0px;
+                                    border: none;
+                                    padding: 0px;
                                 }
                             }
-                        }
 
-                        .animated-details-title {
-                            margin-bottom: 20px;
-                        }
-
-                        .animated-details-light-main-white1 {
-                            color: #1c1c1c;
-
-                            h4 {
-                                font-size: 28px;
-                                font-family: Agrandir-Regular;
-                                line-height: 1.2;
-                                font-weight: 400;
+                            .logo-style {
+                                position: absolute;
+                                inset: 0px;
+                                box-sizing: border-box;
+                                padding: 0px;
+                                border: none;
+                                margin: auto;
+                                display: block;
+                                width: 0px;
+                                height: 0px;
+                                min-width: 100%;
+                                max-width: 100%;
+                                min-height: 100%;
+                                max-height: 100%;
+                                object-fit: contain;
                             }
-                        }
 
-                        .animated-details-light-main-white1 {
-                            color: #1c1c1c;
-                        }
-
-                        .animated-details-long-text {
-                            font-size: 20px;
-                            line-height: 1.4em;
-                            letter-spacing: -0.1px;
-
-                            div {
-                                p {
-                                    font-weight: 300;
-                                    font-family: Helvetica;
-
-                                    sup {
-                                        font-size: 0.7em;
-                                        position: relative;
-                                        top: 0.2em;
-                                        line-height: 0;
-                                    }
-                                }
+                            img {
+                                display: block;
+                                max-width: 100%;
                             }
                         }
                     }
 
-                    .animated-details-2 {
-                        width: fit-content;
-                        margin-right: 95px;
-                        padding: 60px 0 200px;
+                    .animated-details-title {
+                        margin-bottom: 20px;
+                    }
 
-                        .animated-details-row1 {
-                            display: flex;
+                    .animated-details-light-main-white1 {
+                        color: #1c1c1c;
 
-                            .first-image-wrapper {
-                                display: inline-block;
-                                max-width: 100%;
-                                overflow: hidden;
-                                position: relative;
-                                box-sizing: border-box;
-                                margin: 0px;
+                        h4 {
+                            font-size: 28px;
+                            font-family: Agrandir-Regular;
+                            line-height: 1.2;
+                            font-weight: 400;
+                        }
+                    }
 
-                                .wrapper-image {
-                                    box-sizing: border-box;
-                                    display: block;
-                                    max-width: 100%;
+                    .animated-details-light-main-white1 {
+                        color: #1c1c1c;
+                    }
 
-                                    .first-image-wrapper {
-                                        max-width: 100%;
-                                        display: block;
-                                        margin: 0px;
-                                        border: none;
-                                        padding: 0px;
-                                    }
+                    .animated-details-long-text {
+                        font-size: 20px;
+                        line-height: 1.4em;
+                        letter-spacing: -0.1px;
 
-                                    img {
-                                        max-width: 100%;
-                                        display: block;
-                                    }
-                                }
+                        div {
+                            p {
+                                font-weight: 300;
+                                font-family: Helvetica;
 
-                                .first-image-style {
-                                    position: absolute;
-                                    inset: 0px;
-                                    box-sizing: border-box;
-                                    padding: 0px;
-                                    border: none;
-                                    margin: auto;
-                                    display: block;
-                                    width: 0px;
-                                    height: 0px;
-                                    min-width: 100%;
-                                    max-width: 100%;
-                                    min-height: 100%;
-                                    max-height: 100%;
-                                    object-fit: contain;
-                                }
-
-                                img {
-                                    display: block;
-                                    max-width: 100%;
+                                sup {
+                                    font-size: 0.7em;
+                                    position: relative;
+                                    top: 0.2em;
+                                    line-height: 0;
                                 }
                             }
                         }
+                    }
+                }
 
-                        .animated-details-row2 {
-                            display: flex;
+                .animated-details-2 {
+                    width: fit-content;
+                    margin-right: 95px;
+                    padding: 60px 0 200px;
 
-                            .animated-details-gear {
-                                width: 100;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                background-color: #fff;
-                                padding: 12px;
-                                height: 100%;
-                                min-height: auto;
-                                min-width: 95px;
-                                position: relative;
-                                visibility: hidden;
-                            }
+                    .animated-details-row1 {
+                        display: flex;
 
-                            .animated-details-glasses {
-                                position: relative;
-                                height: 100%;
-                                width: 100%;
-                                flex-shrink: 0;
-                                transition: all 1.5s ease-in-out 0s;
-                                transform: translateX(0%);
+                        .first-image-wrapper {
+                            display: inline-block;
+                            max-width: 100%;
+                            overflow: hidden;
+                            position: relative;
+                            box-sizing: border-box;
+                            margin: 0px;
 
-                                .animated-details-light-main-white1 {
-                                    @include layoutBackground;
+                            .wrapper-image {
+                                box-sizing: border-box;
+                                display: block;
+                                max-width: 100%;
+
+                                .first-image-wrapper {
+                                    max-width: 100%;
+                                    display: block;
+                                    margin: 0px;
+                                    border: none;
+                                    padding: 0px;
                                 }
 
-                                .animated-details-frame {
-                                    position: absolute;
-                                    display: flex;
-                                    top: 0;
-                                    left: 0;
+                                img {
+                                    max-width: 100%;
+                                    display: block;
+                                }
+                            }
 
-                                    .glass-image-wrapper {
-                                        display: inline-block;
-                                        max-width: 100%;
-                                        overflow: hidden;
-                                        position: relative;
+                            .first-image-style {
+                                position: absolute;
+                                inset: 0px;
+                                box-sizing: border-box;
+                                padding: 0px;
+                                border: none;
+                                margin: auto;
+                                display: block;
+                                width: 0px;
+                                height: 0px;
+                                min-width: 100%;
+                                max-width: 100%;
+                                min-height: 100%;
+                                max-height: 100%;
+                                object-fit: contain;
+                            }
+
+                            img {
+                                display: block;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+
+                    .animated-details-row2 {
+                        display: flex;
+
+                        .animated-details-gear {
+                            width: 100;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #fff;
+                            padding: 12px;
+                            height: 100%;
+                            min-height: auto;
+                            min-width: 95px;
+                            position: relative;
+                            visibility: hidden;
+                        }
+
+                        .animated-details-glasses {
+                            position: relative;
+                            height: 100%;
+                            width: 100%;
+                            flex-shrink: 0;
+                            transition: all 1.5s ease-in-out 0s;
+                            transform: translateX(0%);
+
+                            .animated-details-light-main-white1 {
+                                @include layoutBackground;
+                            }
+
+                            .animated-details-frame {
+                                position: absolute;
+                                display: flex;
+                                top: 0;
+                                left: 0;
+
+                                .glass-image-wrapper {
+                                    display: inline-block;
+                                    max-width: 100%;
+                                    overflow: hidden;
+                                    position: relative;
+                                    box-sizing: border-box;
+                                    margin: 0px;
+
+                                    .wrapper-image {
                                         box-sizing: border-box;
-                                        margin: 0px;
+                                        display: block;
+                                        max-width: 100%;
 
-                                        .wrapper-image {
-                                            box-sizing: border-box;
-                                            display: block;
+                                        .glass-image-wrapper {
                                             max-width: 100%;
-
-                                            .glass-image-wrapper {
-                                                max-width: 100%;
-                                                display: block;
-                                                margin: 0px;
-                                                border: none;
-                                                padding: 0px;
-                                            }
-
-                                            img {
-                                                max-width: 100%;
-                                                display: block;
-                                            }
-                                        }
-
-                                        .glass-image {
-                                            position: absolute;
-                                            inset: 0px;
-                                            box-sizing: border-box;
-                                            padding: 0px;
+                                            display: block;
+                                            margin: 0px;
                                             border: none;
-                                            margin: auto;
-                                            display: block;
-                                            width: 0px;
-                                            height: 0px;
-                                            min-width: 100%;
-                                            max-width: 100%;
-                                            min-height: 100%;
-                                            max-height: 100%;
-                                            object-fit: cover;
+                                            padding: 0px;
                                         }
 
                                         img {
@@ -275,16 +243,38 @@
                                             display: block;
                                         }
                                     }
-                                }
 
-                                .animated-details-lens {
-                                    position: absolute;
-                                    display: flex;
-                                    top: 0;
-                                    left: 0;
-                                    transition: all 1s ease-in-out 1.5s;
-                                    opacity: 1;
+                                    .glass-image {
+                                        position: absolute;
+                                        inset: 0px;
+                                        box-sizing: border-box;
+                                        padding: 0px;
+                                        border: none;
+                                        margin: auto;
+                                        display: block;
+                                        width: 0px;
+                                        height: 0px;
+                                        min-width: 100%;
+                                        max-width: 100%;
+                                        min-height: 100%;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+
+                                    img {
+                                        max-width: 100%;
+                                        display: block;
+                                    }
                                 }
+                            }
+
+                            .animated-details-lens {
+                                position: absolute;
+                                display: flex;
+                                top: 0;
+                                left: 0;
+                                transition: all 1s ease-in-out 1.5s;
+                                opacity: 1;
                             }
                         }
                     }

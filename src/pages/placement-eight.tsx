@@ -1,5 +1,5 @@
 import React from "react";
-import '../assets/css/eight-placement.css'
+import '../scss/style.scss'
 import FlushExample from "./accordion";
 
 const Placement8: React.FC = () => {
