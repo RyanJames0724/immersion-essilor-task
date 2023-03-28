@@ -9,16 +9,29 @@ const GET_ALL_PLACEMENT_DATA = gql`
     query GetData{
         placementData {
             id
-            placementBackgroundImage
-            placementTitle
-            textAfterBreak
-            placementButtons {
-                id
-                buttonText
-                textAfterSup
+            images {
+              id
+              imageSrc
+              imageBackgroundSrc
+              textDefaultShow
+              textHoverShow
+              supContent
             }
-            placementParagraph
-        }
+            firstText
+            secondText
+            placementButtons {
+              id
+              firstbuttonText
+              secondbuttonText
+            }
+            sideText
+            card {
+              id
+              cardHeader
+              cardContent
+              cardContentEm
+            }
+          }
     }
 `
 
@@ -36,7 +49,7 @@ const PlacementOne: React.FC = () => {
                         <div className={`${style.banner_background} ${style.background}`}>
                             <div className={style.background_wrapper}>
                                 <div className={style.image_holder}>
-                                    <img src={bannerImage} alt="front background" loading="lazy" className={style.hero_banner_background} />
+                                    <img src={`${data.placementData[0].images[0].imageSrc}`} alt="front background" loading="lazy" className={style.hero_banner_background} />
                                 </div>
                             </div>
                         </div>
@@ -52,13 +65,13 @@ const PlacementOne: React.FC = () => {
                         </div>
                         <div className={style.content_left_bottom}>
                             <div className={style.banner_content_logo}>
-                                <img src={bannerContentLogo} alt="content logo" loading="lazy" className={style.img} />
+                                <img src={`${data.placementData[0].images[0].imageBackgroundSrc}`} alt="content logo" loading="lazy" className={style.img} />
                             </div>
                             <div className={style.banner_content_space}></div>
                             <h1 className={style.h1}>{
-                                data.placementData[0].placementTitle}
+                                data.placementData[0].firstText}
                                 < br />
-                                {data.placementData[0].textAfterBreak}
+                                {data.placementData[0].secondText}
                             </h1>
                             <div className={style.banner_button}>
                                 <button className={style.square_button}>
@@ -67,9 +80,9 @@ const PlacementOne: React.FC = () => {
                                         <polygon points="10 8 16 12 10 16 10 8"></polygon>
                                     </svg>
                                     <label className={style.banner_label} htmlFor="button-text">
-                                        {data.placementData[0].placementButtons[0].buttonText}
+                                        {data.placementData[0].placementButtons[0].firstbuttonText}
                                         <sup className={style.sup}>® </sup>
-                                        {data.placementData[0].placementButtons[0].textAfterSup}
+                                        {data.placementData[0].placementButtons[0].secondbuttonText}
                                     </label>
                                 </button>
                             </div>

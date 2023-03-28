@@ -9,24 +9,36 @@ const app = express()
 app.use(cors())
 
 const schema = buildSchema(`
-    type buttonData {
+    type button {
         id: Int
-        buttonText: String
-        textAfterSup: String
+        firstbuttonText: String
+        secondbuttonText: String
     }
 
-    type imageData {
+    type image {
         id: Int
-        imageContent: String
+        imageSrc: String
+        imageBackgroundSrc:String
+        textDefaultShow: String
+        textHoverShow: String
+        supContent: String
+    }
+
+    type card {
+        id: Int
+        cardHeader: String
+        cardContent: String
+        cardContentEm: String
     }
 
     type Data {
         id: Int
-        placementBackgroundImage: String
-        placementTitle: String
-        textAfterBreak: String
-        placementButtons: [buttonData]
-        placementParagraph: String
+        images: [image]
+        firstText: String
+        secondText: String
+        placementButtons: [button]
+        sideText: String
+        card: [card]
     }
 
     type Query {

@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import style from '../scss/style.module.scss'
-import sunWithGlass from '../assets/images/placement-three-img/animation-one/sun-with-glass.webp'
-import sunWithGlassBackground from '../assets/images/placement-three-img/animation-one/sun-with-glass-background.webp'
+//hover effect one
+import hoverGlassOne from '../assets/images/placement-three-img/hoverEffect-one/hover-glass-one.webp'
+import hoverGlassOneBackground from '../assets/images/placement-three-img/hoverEffect-one/hover-glass-one-background.webp'
+//hover effect one
+import hoverGlassTwo from '../assets/images/placement-three-img/hoverEffect-two/hover-glass-two.webp'
+import hoverGlassTwoBackground from '../assets/images/placement-three-img/hoverEffect-two/hover-glass-two-background.webp'
+//hover effect one
+import hoverGlassThree from '../assets/images/placement-three-img/hoverEffect-three/hover-glass-three.webp'
+import hoverGlassThreeBackground from '../assets/images/placement-three-img/hoverEffect-three/hover-glass-three-background.webp'
+//hover effect one
+import hoverGlassFour from '../assets/images/placement-three-img/hoverEffect-four/hover-glass-four.webp'
+import hoverGlassFourBackground from '../assets/images/placement-three-img/hoverEffect-four/hover-glass-four-background.webp'
+
 
 const Placement3: React.FC = () => {
 
@@ -23,7 +34,7 @@ const Placement3: React.FC = () => {
                                         <div className={style.logo_wrapper}>
                                             <div className={style.icon_wrapper}>
                                                 <div className={style.image_wrapper}>
-                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
+                                                    <img src={hoverGlassOne} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
@@ -46,7 +57,7 @@ const Placement3: React.FC = () => {
                                 >
                                     <div className={style.background_image}>
                                         <div className={style.background_wrapper}>
-                                            <img src={sunWithGlassBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
+                                            <img src={hoverGlassOneBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
                                         </div>
                                     </div>
                                     <video loop className={style.background_video} preload="none" playsInline>
@@ -57,12 +68,12 @@ const Placement3: React.FC = () => {
                                         <div className={style.logo_wrapper}>
                                             <div className={style.icon_wrapper}>
                                                 <div className={style.image_wrapper}>
-                                                    <img src={sunWithGlass} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
+                                                    <img src={hoverGlassOne} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
                                         <div className={style.layer_banner_content}>
-                                            <h4>COLOUR VARIES WITH LIGHT INTENSITY</h4>
+                                            <h4>colour varies with light intensity</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +99,7 @@ const Placement3: React.FC = () => {
                                         <div className={style.logo_wrapper}>
                                             <div className={style.icon_wrapper}>
                                                 <div className={style.image_wrapper}>
-                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
+                                                    <img src={hoverGlassTwo} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
@@ -98,8 +109,7 @@ const Placement3: React.FC = () => {
                                         >
                                             <div>
                                                 <div>
-                                                    <p>The color varies according to the weather conditions you are expecting.</p>
-                                                </div>
+                                                    <p>Polarizing help removing glare for safe driving in all outdoors light conditions.</p>                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -111,7 +121,7 @@ const Placement3: React.FC = () => {
                                 >
                                     <div className={style.background_image}>
                                         <div className={style.background_wrapper}>
-                                            <img src={sunWithGlassBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
+                                            <img src={hoverGlassTwoBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
                                         </div>
                                     </div>
                                     <video loop className={style.background_video} preload="none" playsInline>
@@ -122,12 +132,12 @@ const Placement3: React.FC = () => {
                                         <div className={style.logo_wrapper}>
                                             <div className={style.icon_wrapper}>
                                                 <div className={style.image_wrapper}>
-                                                    <img src={sunWithGlass} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
+                                                    <img src={hoverGlassTwo} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
                                         <div className={style.layer_banner_content}>
-                                            <h4>COLOUR VARIES WITH LIGHT INTENSITY</h4>
+                                            <h4>always on polarization reducing reflective flare</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +163,7 @@ const Placement3: React.FC = () => {
                                         <div className={style.logo_wrapper}>
                                             <div className={style.icon_wrapper}>
                                                 <div className={style.image_wrapper}>
-                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
+                                                    <img src={hoverGlassThree} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
@@ -163,8 +173,7 @@ const Placement3: React.FC = () => {
                                         >
                                             <div>
                                                 <div>
-                                                    <p>The color varies according to the weather conditions you are expecting.</p>
-                                                </div>
+                                                    <p>The dynamic contrast of moving vehicles in peripheral vision increases by +27%<sup>1</sup>.</p>                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -176,7 +185,7 @@ const Placement3: React.FC = () => {
                                 >
                                     <div className={style.background_image}>
                                         <div className={style.background_wrapper}>
-                                            <img src={sunWithGlassBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
+                                            <img src={hoverGlassThreeBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
                                         </div>
                                     </div>
                                     <video loop className={style.background_video} preload="none" playsInline>
@@ -187,12 +196,12 @@ const Placement3: React.FC = () => {
                                         <div className={style.logo_wrapper}>
                                             <div className={style.icon_wrapper}>
                                                 <div className={style.image_wrapper}>
-                                                    <img src={sunWithGlass} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
+                                                    <img src={hoverGlassThree} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
                                         <div className={style.layer_banner_content}>
-                                            <h4>COLOUR VARIES WITH LIGHT INTENSITY</h4>
+                                            <h4>optimal driving experience</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -218,7 +227,7 @@ const Placement3: React.FC = () => {
                                         <div className={style.logo_wrapper}>
                                             <div className={style.icon_wrapper}>
                                                 <div className={style.image_wrapper}>
-                                                    <img src={sunWithGlass} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
+                                                    <img src={hoverGlassFour} alt="sun with glass" loading='lazy' className={`${style.image_sun_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
@@ -228,8 +237,7 @@ const Placement3: React.FC = () => {
                                         >
                                             <div>
                                                 <div>
-                                                    <p>The color varies according to the weather conditions you are expecting.</p>
-                                                </div>
+                                                    <p>Lenses react to both visible light and ultra-violet light blocking 100% UVA & UVB.</p>                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -241,7 +249,7 @@ const Placement3: React.FC = () => {
                                 >
                                     <div className={style.background_image}>
                                         <div className={style.background_wrapper}>
-                                            <img src={sunWithGlassBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
+                                            <img src={hoverGlassFourBackground} alt="An empty way" className={`${style.background_sun_with_glass} ${style.img}`} />
                                         </div>
                                     </div>
                                     <video loop className={style.background_video} preload="none" playsInline>
@@ -252,12 +260,12 @@ const Placement3: React.FC = () => {
                                         <div className={style.logo_wrapper}>
                                             <div className={style.icon_wrapper}>
                                                 <div className={style.image_wrapper}>
-                                                    <img src={sunWithGlass} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
+                                                    <img src={hoverGlassFour} alt="sun with glass" className={`${style.sun_with_glass} ${style.img}`} />
                                                 </div>
                                             </div>
                                         </div>
                                         <div className={style.layer_banner_content}>
-                                            <h4>COLOUR VARIES WITH LIGHT INTENSITY</h4>
+                                            <h4>blocks 100% uva and uvb rays</h4>
                                         </div>
                                     </div>
                                 </div>

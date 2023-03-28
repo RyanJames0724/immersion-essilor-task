@@ -1,14 +1,14 @@
 @use './custom';
-@use './placement-one.module.scss';
-@use './placement-two.module.scss';
-@use './placement-three.module.scss';
-@use './placement-four.module.scss';
-@use './placement-five.module.scss';
-@use './placement-six.module.scss';
-@use './placement-seven.module.scss';
-@use './placement-eight.module.scss';
-@use './placement-nine.module.scss';
-@use './placement-ten.module.scss';
+@use './placement-one.module';
+@use './placement-two.module';
+@use './placement-three.module';
+@use './placement-four.module';
+@use './placement-five.module';
+@use './placement-six.module';
+@use './placement-seven.module';
+@use './placement-eight.module';
+@use './placement-nine.module';
+@use './placement-ten.module';
 
 .one_column_layout {
     display: grid;
