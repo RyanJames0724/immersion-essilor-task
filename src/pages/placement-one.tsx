@@ -1,36 +1,20 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../scss/style.module.scss'
-import bannerImage from '../assets/images/placement-one-img/banner-background.webp'
-import bannerContentLogo from '../assets/images/placement-one-img/banner-content-logo.webp'
 import { gql, useQuery } from '@apollo/client';
 
 const GET_ALL_PLACEMENT_DATA = gql`
     query GetData{
-        placementData {
+        placementOneDataQuery {
             id
-            images {
-              id
-              imageSrc
-              imageBackgroundSrc
-              textDefaultShow
-              textHoverShow
-              supContent
-            }
+            bannerBackground
+            bannerLogo
             firstText
-            secondText
             placementButtons {
               id
-              firstbuttonText
-              secondbuttonText
+              buttonText
             }
             sideText
-            card {
-              id
-              cardHeader
-              cardContent
-              cardContentEm
-            }
           }
     }
 `
@@ -39,7 +23,26 @@ const PlacementOne: React.FC = () => {
     const { loading, error, data } = useQuery(GET_ALL_PLACEMENT_DATA)
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error: {error.message}</p>
-    console.log(data.placementData)
+
+    const editText = (text: string) => {
+        return (
+            <h1>
+                {text.split(' ').map((data: string, index: number) => (
+                    <React.Fragment key={index}>
+                        {data === 'any' ? (
+                            <>
+                                {data}
+                                <br />
+                            </>
+
+                        ) : (
+                            data + ' '
+                        )}
+                    </React.Fragment>
+                ))}
+            </h1>
+        );
+    };
 
     return (
         <div className={`${style.one_column_layout_row} ${style.main_placement_1}`}>
@@ -49,7 +52,7 @@ const PlacementOne: React.FC = () => {
                         <div className={`${style.banner_background} ${style.background}`}>
                             <div className={style.background_wrapper}>
                                 <div className={style.image_holder}>
-                                    <img src={`${data.placementData[0].images[0].imageSrc}`} alt="front background" loading="lazy" className={style.hero_banner_background} />
+                                    <img src={data.placementOneDataQuery[0].bannerBackground} alt="front background" loading="lazy" className={style.hero_banner_background} />
                                 </div>
                             </div>
                         </div>
@@ -65,14 +68,10 @@ const PlacementOne: React.FC = () => {
                         </div>
                         <div className={style.content_left_bottom}>
                             <div className={style.banner_content_logo}>
-                                <img src={`${data.placementData[0].images[0].imageBackgroundSrc}`} alt="content logo" loading="lazy" className={style.img} />
+                                <img src={data.placementOneDataQuery[0].bannerLogo} alt="content logo" loading="lazy" className={style.img} />
                             </div>
                             <div className={style.banner_content_space}></div>
-                            <h1 className={style.h1}>{
-                                data.placementData[0].firstText}
-                                < br />
-                                {data.placementData[0].secondText}
-                            </h1>
+                            {editText(data.placementOneDataQuery[0].firstText)}
                             <div className={style.banner_button}>
                                 <button className={style.square_button}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={style.svg}>
@@ -80,15 +79,13 @@ const PlacementOne: React.FC = () => {
                                         <polygon points="10 8 16 12 10 16 10 8"></polygon>
                                     </svg>
                                     <label className={style.banner_label} htmlFor="button-text">
-                                        {data.placementData[0].placementButtons[0].firstbuttonText}
-                                        <sup className={style.sup}>® </sup>
-                                        {data.placementData[0].placementButtons[0].secondbuttonText}
+                                        {data.placementOneDataQuery[0].placementButtons[0].buttonText}
                                     </label>
                                 </button>
                             </div>
                             <div className={style.long_text}>
                                 <div>
-                                    <p>{data.placementData[0].placementParagraph}</p>
+                                    <p>{data.placementOneDataQuery[0].sideText}</p>
                                 </div>
                             </div>
                             <a href="#">

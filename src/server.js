@@ -1,61 +1,74 @@
-import express from 'express'
-import { buildSchema } from 'graphql'
-import { graphqlHTTP } from 'express-graphql'
-import mockData from './mock-data.js'
+import express from 'express';
+import { graphqlHTTP } from 'express-graphql';
 import cors from 'cors'
+import {
+    GraphQLSchema,
+    GraphQLObjectType,
+    GraphQLString,
+    GraphQLList,
+    GraphQLInt,
+    GraphQLNonNull
+} from 'graphql';
 
-const app = express()
+import {
+    placementOneData as mockPlacementOneData,
+    placementTwoData as mockPlacementTwoData,
+    placementThreeData as mockPlacementThreeData,
+    placementFourData as mockPlacementFourData,
+    placementFiveData as mockPlacementFiveData
+} from './mock-data.js';
+
+import {
+    placementOneType,
+    placementTwoType,
+    placementThreeType,
+    placementFourType,
+    placementFiveType
+} from './placements-type.js'
+
+const app = express();
 
 app.use(cors())
 
-const schema = buildSchema(`
-    type button {
-        id: Int
-        firstbuttonText: String
-        secondbuttonText: String
+const RootQueryType = new GraphQLObjectType({
+    name: 'Query',
+    description: 'Root Query',
+    fields: {
+        placementOneDataQuery: {
+            type: new GraphQLList(placementOneType),
+            description: 'List of placement one data',
+            resolve: () => mockPlacementOneData
+        },
+        placementTwoDataQuery: {
+            type: new GraphQLList(placementTwoType),
+            description: 'List of placement two data',
+            resolve: () => mockPlacementTwoData
+        },
+        placementThreeDataQuery: {
+            type: new GraphQLList(placementThreeType),
+            description: 'List of placement three data',
+            resolve: () => mockPlacementThreeData
+        },
+        placementFourDataQuery: {
+            type: new GraphQLList(placementFourType),
+            description: 'List of placement four data',
+            resolve: () => mockPlacementFourData
+        },
+        placementFiveDataQuery: {
+            type: new GraphQLList(placementFiveType),
+            description: 'List of placement five data',
+            resolve: () => mockPlacementFiveData
+        }
     }
+});
 
-    type image {
-        id: Int
-        imageSrc: String
-        imageBackgroundSrc:String
-        textDefaultShow: String
-        textHoverShow: String
-        supContent: String
-    }
 
-    type card {
-        id: Int
-        cardHeader: String
-        cardContent: String
-        cardContentEm: String
-    }
-
-    type Data {
-        id: Int
-        images: [image]
-        firstText: String
-        secondText: String
-        placementButtons: [button]
-        sideText: String
-        card: [card]
-    }
-
-    type Query {
-        placementData: [Data]
-    }
-`)
-
-const root = {
-    placementData: () => {
-        return mockData
-    }
-}
+const schema = new GraphQLSchema({
+    query: RootQueryType
+});
 
 app.use('/graphql', graphqlHTTP({
-    graphiql: true,
     schema: schema,
-    rootValue: root
-}))
-
-app.listen(5000, () => console.log('Server on Port 5000'))
+    graphiql: true
+}));
+app.listen(5000, () => console.log('Server is running on port 5000'));
