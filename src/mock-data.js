@@ -138,7 +138,3 @@ export const placementSixData = [{
     ]
 
 }]
-
-export const placementSevenData = [{
-    
-}]

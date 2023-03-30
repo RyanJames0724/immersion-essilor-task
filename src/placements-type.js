@@ -58,6 +58,17 @@ const getPlacementFiveimageData = new GraphQLObjectType({
     })
 });
 
+const getPlacementSiximageData = new GraphQLObjectType({
+    name: 'PlacementSixImages',
+    description: 'This the data for images in placement six',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt) },
+        imageSrc: { type: GraphQLString },
+        imageTitle: { type: GraphQLString },
+        imageDesc: { type: GraphQLString },
+    })
+});
+
 export const placementOneType = new GraphQLObjectType({
     name: 'PlacementOneData',
     description: 'This is the data for placement one',
@@ -108,5 +119,14 @@ export const placementFiveType = new GraphQLObjectType({
         id: { type: GraphQLNonNull(GraphQLInt) },
         firstText: { type: GraphQLString },
         images: { type: new GraphQLList(getPlacementFiveimageData) },
+    })
+});
+
+export const placementSixType = new GraphQLObjectType({
+    name: 'PlacementSixData',
+    description: 'This is the data for placement six',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt) },
+        images: { type: new GraphQLList(getPlacementSiximageData) },
     })
 });

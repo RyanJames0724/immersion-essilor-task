@@ -1,8 +1,5 @@
 import React from 'react'
 import style from '../scss/style.module.scss'
-import firstSunGlassDrive from '../assets/images/placement-five-img/first-sunglass-drive.webp'
-import secondSunGlassDrive from '../assets/images/placement-five-img/second-sunglass-drive.webp'
-import thirdSunGlassDrive from '../assets/images/placement-five-img/third-sunglass-drive.webp'
 import { gql, useQuery } from '@apollo/client';
 
 const GET_ALL_PLACEMENT_DATA = gql`

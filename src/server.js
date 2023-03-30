@@ -15,7 +15,8 @@ import {
     placementTwoData as mockPlacementTwoData,
     placementThreeData as mockPlacementThreeData,
     placementFourData as mockPlacementFourData,
-    placementFiveData as mockPlacementFiveData
+    placementFiveData as mockPlacementFiveData,
+    placementSixData as mockPlacementSixData
 } from './mock-data.js';
 
 import {
@@ -23,7 +24,8 @@ import {
     placementTwoType,
     placementThreeType,
     placementFourType,
-    placementFiveType
+    placementFiveType,
+    placementSixType
 } from './placements-type.js'
 
 const app = express();
@@ -58,6 +60,11 @@ const RootQueryType = new GraphQLObjectType({
             type: new GraphQLList(placementFiveType),
             description: 'List of placement five data',
             resolve: () => mockPlacementFiveData
+        },
+        placementSixDataQuery: {
+            type: new GraphQLList(placementSixType),
+            description: 'List of placement six data',
+            resolve: () => mockPlacementSixData
         }
     }
 });

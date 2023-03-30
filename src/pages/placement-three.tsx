@@ -57,7 +57,12 @@ const Placement3: React.FC = () => {
                             <div key={data.id}>
                                 <div className={`${style.layer_banner_wrapper} ${style.layer_wrapper}`}>
                                     <div
-                                        className={`${style.second_layer} ${isHovering ? style.second_layer_show : style.second_layer_hide}`}
+                                        className={`${style.second_layer} ${data.id === 1 ? isHovering ? style.second_layer_show_1 : style.second_layer_hide_1
+                                                : data.id === 2 ? isHovering ? style.second_layer_show_2 : style.second_layer_hide_2
+                                                    : data.id === 3 ? isHovering ? style.second_layer_show_3 : style.second_layer_hide_3
+                                                        : data.id === 4 ? isHovering ? style.second_layer_show_4 : style.second_layer_hide_4
+                                                            : ''
+                                            }`}
                                         onMouseEnter={() => setIsHovering(true)}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
