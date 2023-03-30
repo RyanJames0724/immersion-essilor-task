@@ -1,4 +1,5 @@
-@use './custom';
+@use './custom.scss';
+@use './variables.scss' as *;
 @use './placement-one.module';
 @use './placement-two.module';
 @use './placement-three.module';
@@ -17,4 +18,14 @@
     grid-auto-rows: max-content;
     width: 100%;
     margin: 0 auto;
+
+    @media(min-width: 821px) {
+        background-color: #f3f4f4;
+    }
+
+    .accordion_paragraph {
+        font-family: Helvetica;
+        font-weight: 300; 
+        margin-bottom: 0;
+    }
 }

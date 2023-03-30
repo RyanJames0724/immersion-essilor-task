@@ -3,7 +3,7 @@ import {
     GraphQLString,
     GraphQLList,
     GraphQLInt,
-    GraphQLNonNull
+    GraphQLNonNull,
 } from 'graphql';
 
 const getbuttonData = new GraphQLObjectType({
@@ -58,7 +58,7 @@ const getPlacementFiveimageData = new GraphQLObjectType({
     })
 });
 
-const getPlacementSiximageData = new GraphQLObjectType({
+const getPlacementSixAndSevenimageData = new GraphQLObjectType({
     name: 'PlacementSixImages',
     description: 'This the data for images in placement six',
     fields: () => ({
@@ -68,6 +68,15 @@ const getPlacementSiximageData = new GraphQLObjectType({
         imageDesc: { type: GraphQLString },
     })
 });
+
+const placementNineData = new GraphQLObjectType({
+    name: 'PlacementNineDataText',
+    description: 'This data is for placement nine',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt) },
+        firstText: { type: GraphQLString },
+    })
+})
 
 export const placementOneType = new GraphQLObjectType({
     name: 'PlacementOneData',
@@ -127,6 +136,43 @@ export const placementSixType = new GraphQLObjectType({
     description: 'This is the data for placement six',
     fields: () => ({
         id: { type: GraphQLNonNull(GraphQLInt) },
-        images: { type: new GraphQLList(getPlacementSiximageData) },
+        images: { type: new GraphQLList(getPlacementSixAndSevenimageData) },
+    })
+});
+
+export const placementSevenType = new GraphQLObjectType({
+    name: 'PlacementSevenData',
+    description: 'This is the data for placement seven',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt) },
+        images: { type: new GraphQLList(getPlacementSixAndSevenimageData) },
+        firstText: { type: GraphQLString },
+    })
+});
+
+export const placementEightType = new GraphQLObjectType({
+    name: 'PlacementEightData',
+    description: 'This is the data for placement eight',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt) },
+        firstText: { type: GraphQLString },
+    })
+});
+
+export const placementNineType = new GraphQLObjectType({
+    name: 'PlacementNineData',
+    description: 'This is the data for placement nine',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt) },
+        placementText: { type: new GraphQLList(placementNineData) },
+    })
+});
+
+export const placementTenType = new GraphQLObjectType({
+    name: 'PlacementTenData',
+    description: 'This is the data for placement ten',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt) },
+        firstText: { type: GraphQLString },
     })
 });

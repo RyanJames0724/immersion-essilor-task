@@ -9,6 +9,10 @@
     z-index: 1;
     @include layoutBackground;
 
+    @media (max-width: 600px) {
+        height: 100%;
+    }
+
     div {
         .placement_7_title {
             text-transform: uppercase;
@@ -29,6 +33,11 @@
             background-color: #fff;
             transform: translateY(-20px);
 
+            @media (max-width: 600px) {
+                min-height: 1140px;
+                flex-direction: column-reverse;
+            }
+
             .column_item {
                 transition: all 0.75s ease-in-out 0s;
                 opacity: 1;
@@ -39,6 +48,10 @@
                 text-align: center;
                 flex-basis: 0;
                 flex-grow: 1;
+
+                @media (max-width: 600px) {
+                    min-height: 311px;
+                }
 
                 .item_icon {
                     max-width: 120px;
@@ -117,6 +130,7 @@
 
                     div {
                         p {
+                            font-family: Helvetica;
                             font-weight: 300;
                         }
                     }

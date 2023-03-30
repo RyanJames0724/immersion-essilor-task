@@ -4,10 +4,7 @@ import cors from 'cors'
 import {
     GraphQLSchema,
     GraphQLObjectType,
-    GraphQLString,
     GraphQLList,
-    GraphQLInt,
-    GraphQLNonNull
 } from 'graphql';
 
 import {
@@ -16,7 +13,11 @@ import {
     placementThreeData as mockPlacementThreeData,
     placementFourData as mockPlacementFourData,
     placementFiveData as mockPlacementFiveData,
-    placementSixData as mockPlacementSixData
+    placementSixData as mockPlacementSixData,
+    placementSevenData as mockPlacementSevenData,
+    placementEightData as mockPlacementEightData,
+    placementNineData as mockPlacementNineData,
+    placementTenData as mockPlacementTenData
 } from './mock-data.js';
 
 import {
@@ -25,7 +26,11 @@ import {
     placementThreeType,
     placementFourType,
     placementFiveType,
-    placementSixType
+    placementSixType,
+    placementSevenType,
+    placementEightType,
+    placementNineType,
+    placementTenType
 } from './placements-type.js'
 
 const app = express();
@@ -65,6 +70,26 @@ const RootQueryType = new GraphQLObjectType({
             type: new GraphQLList(placementSixType),
             description: 'List of placement six data',
             resolve: () => mockPlacementSixData
+        },
+        placementSevenDataQuery: {
+            type: new GraphQLList(placementSevenType),
+            description: 'List of placement seven data',
+            resolve: () => mockPlacementSevenData
+        },
+        placementEightDataQuery: {
+            type: new GraphQLList(placementEightType),
+            description: 'List of placement eight data',
+            resolve: () => mockPlacementEightData
+        },
+        placementNineDataQuery: {
+            type: new GraphQLList(placementNineType),
+            description: 'List of placement nine data',
+            resolve: () => mockPlacementNineData
+        },
+        placementTenDataQuery: {
+            type: new GraphQLList(placementTenType),
+            description: 'List of placement ten data',
+            resolve: () => mockPlacementTenData
         }
     }
 });

@@ -9,6 +9,10 @@
     z-index: 1;
     @include layoutBackground;
 
+    @media (max-width: 600px) {
+        height: 100%;
+    }
+
     div {
         .three_static_card_dark {
             max-width: calc(var(--app-container-width) + 40px);
@@ -20,8 +24,22 @@
                 font-size: 24px;
                 margin-bottom: 16px;
 
+                @media (max-width: 820px) {
+                    margin-bottom: 16px;
+                    color: #000;
+                    font-size: 16px;
+                }
+
+                @media (max-width: 820px) {
+                    font-family: Helvetica;
+                }
+
                 p {
                     font-weight: 500;
+
+                    @media (max-width: 820px) {
+                        font-weight: 300;
+                    }
                 }
             }
 
@@ -31,6 +49,10 @@
                         minmax(var(--grid-card-width), 1fr));
                 grid-gap: var(--grid-card-gap);
                 gap: var(--grid-card-gap);
+
+                @media (max-width: 820px) {
+                    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+                }
 
                 .card {
                     transition: all 0.5s ease-in-out 0s;
@@ -79,11 +101,19 @@
                     justify-content: center;
                     flex-direction: column;
 
+                    @media (max-width: 820px) {
+                        margin-right: 0;
+                    }
+
                     div {
                         .static_card_header {
                             font-size: 80px;
                             font-family: Agrandir-Regular;
                             font-weight: 300;
+
+                            @media (max-width: 820px) {
+                                font-size: 51px;
+                            }
                         }
 
                         .static_dark_content {
@@ -91,6 +121,10 @@
                             font-family: Helvetica;
                             max-width: 315px;
                             margin: auto;
+
+                            @media (max-width: 820px) {
+                                font-size: 18px;
+                            }
 
                             div {
                                 p {

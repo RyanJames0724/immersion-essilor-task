@@ -1,21 +1,52 @@
 import React from 'react'
 import style from '../scss/style.module.scss'
+import { gql, useQuery } from "@apollo/client";
+
+const GET_ALL_PLACEMENT_DATA = gql`
+    query GetData{
+        placementNineDataQuery {
+            id
+            placementText {
+                firstText
+            }
+        }
+    }
+`
 
 const Placement9: React.FC = () => {
+
+    const { loading, error, data } = useQuery(GET_ALL_PLACEMENT_DATA)
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Error: {error.message}</p>
+
+    const editText = (text: string) => {
+        return (
+            <>
+                {text.split(' ').map((data: string, index: number) => (
+                    <React.Fragment key={index}>
+                        {data === '®' ? (
+                            <sup>{data} </sup>
+                        ) : (
+                            data + ' '
+                        )}
+                    </React.Fragment>
+                ))}
+            </>
+        );
+    };
+
     return (
         <div className={`${style.one_column_layout_row} ${style.main_placement_9}`}>
             <div>
                 <div className={style.disclaimer}>
-                    <span>
-                        <div>
-                            <p>1. Source: EcoOptics Limited - Prof. Nicholas Roberts, Quantitative study measuring experimentally how Drivewear increases the achromatic contrast (change in perceived brightness) of moving objects.</p>
-                        </div>
-                    </span>
-                    <span>
-                        <div>
-                            <p>2. Source: Transitions<sup>®</sup> Drivewear<sup>®</sup> consumer survey (N=205)</p>
-                        </div>
-                    </span>
+                    {data.placementNineDataQuery[0].placementText.map((data: any, index: number) => (
+                        <span key={index}>
+                            <div>
+                                <p>{editText(data.firstText)}</p>
+                            </div>
+                        </span>
+                    ))}
+
                 </div>
             </div>
         </div>

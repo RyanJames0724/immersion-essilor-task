@@ -1,6 +1,4 @@
 import React from 'react'
-import threeGlassLens from '../assets/images/placement-six-img/three-glass-lens.webp'
-import sunGlass from '../assets/images/placement-six-img/sunglass.webp'
 import style from '../scss/style.module.scss'
 import { gql, useQuery } from '@apollo/client';
 
@@ -53,8 +51,8 @@ const Placement6: React.FC = () => {
                                     <div className={style.column_drive_box}>
                                         <img
                                             src={data.imageSrc}
-                                            alt={`${data.id === 1 ? 'three glass lens' 
-                                            : data.id === 2 ? 'sunglass': ''}`}
+                                            alt={`${data.id === 1 ? 'three glass lens'
+                                                : data.id === 2 ? 'sunglass' : ''}`}
                                             className={
                                                 data.id === 1 ? style.three_lens
                                                     : data.id === 2 ? style.sun_glass : style.sun_glass

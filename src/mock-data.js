@@ -138,3 +138,53 @@ export const placementSixData = [{
     ]
 
 }]
+
+export const placementSevenData = [{
+    id: 7,
+    images: [
+        {
+            id: 3,
+            imageSrc: '../src/assets/images/placement-seven-img/comfort-image.webp',
+            imageTitle: 'protection',
+            imageDesc: 'Protection against rapidly changing bright light conditions & reflective glare in any weather conditions.'
+        },
+        {
+            id: 4,
+            imageSrc: '../src/assets/images/placement-seven-img/protection-image.webp',
+            imageTitle: 'comfort',
+            imageDesc: 'No need to change lenses while driving Safer driving experience: faster recognition and quicker reaction times.'
+        },
+        {
+            id: 5,
+            imageSrc: '../src/assets/images/placement-seven-img/vision-image.webp',
+            imageTitle: 'vision',
+            imageDesc: 'In 90% cases wearers indicate noticing the greatest benefit of Drivewear in bright sunshine.'
+        }
+    ],
+    firstText: 'comfort & safety while driving.'
+}]
+
+export const placementEightData = [{
+    id: 8,
+    firstText: 'Frequently asked questions'
+}]
+
+export const placementNineData = [{
+    id: 9,
+    placementText : [
+        {
+            id: 1,
+            firstText: '1. Source: EcoOptics Limited - Prof. Nicholas Roberts, Quantitative study measuring experimentally how Drivewear increases the achromatic contrast (change in perceived brightness) of moving objects.',
+
+        },{
+            id: 2,
+            firstText: '2. Source: Transitions ® Drivewear ® consumer survey (N=205)'
+
+        }
+    ]
+}]
+
+export const placementTenData = [{
+    id: 10,
+    firstText: 'back to top '
+}]

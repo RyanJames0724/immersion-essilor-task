@@ -1,5 +1,4 @@
 @use './variables.scss' as *;
-@use './global.scss' as *;
 
 .main_placement_10 {
     grid-row: inherit;
@@ -24,10 +23,16 @@
                 .back_to_top_action {
                     display: flex;
                     align-items: center;
+                    justify-content: flex-start;
+                    cursor: pointer;
+                    user-select: none;
+                    width: fit-content;
 
                     .back_to_top_arrow_up {
                         stroke-width: 1;
                         margin-right: 10px;
+                        display: flex;
+                        align-items: center;
                     }
 
                     .back_to_top_label {
@@ -37,6 +42,7 @@
 
                     p {
                         font-weight: 300;
+                        margin-bottom: 0;
                     }
                 }
             }
