@@ -119,3 +119,26 @@ export const placementFiveData = [{
     ],
     firstText: 'transitions drivewear lens color.'
 }]
+
+export const placementSixData = [{
+    id: 6,
+    images: [
+        {
+            id: 1,
+            imageSrc: '../src/assets/images/placement-six-img/three-glass-lens.webp',
+            imageTitle: 'polarization technology.',
+            imageDesc: 'The polarization technology of Transitions Drivewear lenses represent a significant breakthrough. Transitions Drivewear lenses feature a high efficiency polarizing filter that blocks the bad light (glare) and lets the maximum amount of good light through the lens.',
+        },
+        {
+            id: 2,
+            imageSrc: '../src/assets/images/placement-six-img/sunglass.webp',
+            imageTitle: 'photochromic technology.',
+            imageDesc: 'The photochromic properties of Transitions Drivewear lenses offer a significant advancement. Transitions Optical developed special UV and visible light sensitive photochromic dyes.',
+        }
+    ]
+
+}]
+
+export const placementSevenData = [{
+    
+}]
