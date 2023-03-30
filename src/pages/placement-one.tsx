@@ -1,26 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../scss/style.module.scss'
-import { gql, useQuery } from '@apollo/client';
-
-const GET_ALL_PLACEMENT_DATA = gql`
-    query GetData{
-        placementOneDataQuery {
-            id
-            bannerBackground
-            bannerLogo
-            firstText
-            placementButtons {
-              id
-              buttonText
-            }
-            sideText
-          }
-    }
-`
+import { useQuery } from '@apollo/client';
+import { GET_PLACEMENT_ONE_DATA } from '../query/placementAllQuery.js'
 
 const PlacementOne: React.FC = () => {
-    const { loading, error, data } = useQuery(GET_ALL_PLACEMENT_DATA)
+    const { loading, error, data } = useQuery(GET_PLACEMENT_ONE_DATA)
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error: {error.message}</p>
 

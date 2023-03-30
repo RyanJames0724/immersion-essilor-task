@@ -1,24 +1,17 @@
 import React from 'react'
 import style from '../scss/style.module.scss'
 import { gql, useQuery } from "@apollo/client";
+import { GET_PLACEMENT_TEN_DATA } from '../query/placementAllQuery';
 
-const GET_ALL_PLACEMENT_DATA = gql`
-    query GetData{
-        placementTenDataQuery {
-            id
-            firstText
-        }
-    }
-`
 
 const Placement10: React.FC = () => {
 
-    const { loading, error, data } = useQuery(GET_ALL_PLACEMENT_DATA)
+    const { loading, error, data } = useQuery(GET_PLACEMENT_TEN_DATA)
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error: {error.message}</p>
-    
+
     const handleClick = () => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }
 
     return (

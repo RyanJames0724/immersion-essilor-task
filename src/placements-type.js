@@ -78,6 +78,18 @@ const placementNineData = new GraphQLObjectType({
     })
 })
 
+const accordionListData = new GraphQLObjectType({
+    name: 'AccordionData',
+    description: 'This data is for accordion',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt) },
+        accordionHeader: { type: GraphQLString },
+        accordionBody: { type: GraphQLString },
+    })
+})
+
+
+
 export const placementOneType = new GraphQLObjectType({
     name: 'PlacementOneData',
     description: 'This is the data for placement one',
@@ -174,5 +186,15 @@ export const placementTenType = new GraphQLObjectType({
     fields: () => ({
         id: { type: GraphQLNonNull(GraphQLInt) },
         firstText: { type: GraphQLString },
+    })
+});
+
+export const accordionType = new GraphQLObjectType({
+    name: 'accordionData',
+    description: 'This is the data for accordion',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt) },
+        accordionData: { type: new GraphQLList(accordionListData) },
+
     })
 });

@@ -12,6 +12,7 @@ import PlacementTen from './pages/placement-ten';
 import style from './scss/style.module.scss'
 
 
+
 const App: React.FC = () => {
     return (
         <div className={style.one_column_layout}>

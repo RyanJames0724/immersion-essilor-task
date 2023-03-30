@@ -2,19 +2,11 @@ import React from "react";
 import style from '../scss/style.module.scss'
 import FlushExample from "./accordion";
 import { gql, useQuery } from "@apollo/client";
-
-const GET_ALL_PLACEMENT_DATA = gql`
-    query GetData{
-        placementEightDataQuery {
-            id
-            firstText
-        }
-    }
-`
+import { GET_PLACEMENT_EIGHT_DATA } from "../query/placementAllQuery";
 
 const Placement8: React.FC = () => {
 
-    const { loading, error, data } = useQuery(GET_ALL_PLACEMENT_DATA)
+    const { loading, error, data } = useQuery(GET_PLACEMENT_EIGHT_DATA)
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error: {error.message}</p>
 

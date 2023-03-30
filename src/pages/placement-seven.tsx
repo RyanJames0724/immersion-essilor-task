@@ -3,26 +3,13 @@ import style from '../scss/style.module.scss'
 import protectionImage from '../assets/images/placement-seven-img/protection-image.webp'
 import comfortImage from '../assets/images/placement-seven-img/comfort-image.webp'
 import visionImage from '../assets/images/placement-seven-img/vision-image.webp'
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
+import { GET_PLACEMENT_SEVEN_DATA } from "../query/placementAllQuery";
 
-const GET_ALL_PLACEMENT_DATA = gql`
-    query GetData{
-        placementSevenDataQuery {
-            id
-            images {
-                id
-                imageSrc
-                imageTitle
-                imageDesc
-            }
-            firstText
-        }
-    }
-`
 
 const Placement7: React.FC = () => {
 
-    const { loading, error, data } = useQuery(GET_ALL_PLACEMENT_DATA)
+    const { loading, error, data } = useQuery(GET_PLACEMENT_SEVEN_DATA)
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error: {error.message}</p>
 

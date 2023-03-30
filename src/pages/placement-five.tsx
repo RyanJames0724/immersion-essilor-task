@@ -1,26 +1,11 @@
 import React from 'react'
 import style from '../scss/style.module.scss'
 import { gql, useQuery } from '@apollo/client';
-
-const GET_ALL_PLACEMENT_DATA = gql`
-    query GetData{
-        placementFiveDataQuery {
-            id
-            images {
-                id
-                imageSrc
-                imageTitle
-                imageDescTitle
-                imageDesc
-            }
-            firstText
-        }
-    }
-`
+import { GET_PLACEMENT_FIVE_DATA } from '../query/placementAllQuery';
 
 const Placement5: React.FC = () => {
 
-    const { loading, error, data } = useQuery(GET_ALL_PLACEMENT_DATA)
+    const { loading, error, data } = useQuery(GET_PLACEMENT_FIVE_DATA)
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error: {error.message}</p>
 

@@ -1,27 +1,11 @@
 import React from "react";
 import style from '../scss/style.module.scss'
-import animatedLogo from '../assets/images/placement-two-img/animated-details-logo.webp'
-import placement2image1 from '../assets/images/placement-two-img/way.webp'
-import glasses from '../assets/images/placement-two-img/glasses.gif'
 import { gql, useQuery } from '@apollo/client';
-
-const GET_ALL_PLACEMENT_DATA = gql`
-    query GetData{
-        placementTwoDataQuery {
-            id
-            images {
-                id
-                imageSrc
-            }
-            firstText
-            secondText
-          }
-    }
-`
+import { GET_PLACEMENT_TWO_DATA } from "../query/placementAllQuery";
 
 const PlacementTwo: React.FC = () => {
 
-    const { loading, error, data } = useQuery(GET_ALL_PLACEMENT_DATA)
+    const { loading, error, data } = useQuery(GET_PLACEMENT_TWO_DATA)
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error: {error.message}</p>
 
@@ -44,7 +28,7 @@ const PlacementTwo: React.FC = () => {
 
 
     return (
-        <div className={`${style.one_column_layout_row} ${style.main_placement_2}`}>
+        <div className={`${style.one_column_layout_row} ${style.main_placement_2}`} id='placement2'>
             <div>
                 <div className={`${style.animated_details_light_main_white1} ${style.animated_details_light_main}`}>
                     <div className={style.animated_details_main}>
