@@ -3,20 +3,29 @@ import style from '../scss/style.module.scss'
 import { gql, useQuery } from '@apollo/client';
 import { GET_PLACEMENT_FIVE_DATA } from '../query/placementAllQuery';
 
-const Placement5: React.FC = () => {
+interface IDataImages {
+    imageSrc: string
+    imageTitle: string
+    imageDescTitle: string
+    imageDesc: string
+}
 
-    const { loading, error, data } = useQuery(GET_PLACEMENT_FIVE_DATA)
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
+interface IDataPlacementFive {
+    id: number
+    images: [IDataImages]
+    firstText: string
+}
+
+const Placement5: React.FC<IDataPlacementFive> = ({ id, images, firstText }) => {
 
     return (
         <div className={`${style.one_column_layout_row} ${style.main_placement_5}`}>
             <div>
                 <div className={style.three_column_drive_banner}>
                     <div className={style.column_drive_container}>
-                        <h2>{data.placementFiveDataQuery[0].firstText}</h2>
+                        <h2>{firstText}</h2>
                         <div className={style.column_drive_grid}>
-                            {data.placementFiveDataQuery[0].images.map((data: any) => (
+                            {images.map((data: any) => (
                                 <div key={data.id}>
                                     <div className={style.column_drive_box_1}>
                                         <img src={data.imageSrc} alt="first sun glass drive" />

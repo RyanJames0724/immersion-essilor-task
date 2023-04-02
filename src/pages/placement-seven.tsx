@@ -6,12 +6,19 @@ import visionImage from '../assets/images/placement-seven-img/vision-image.webp'
 import { useQuery } from '@apollo/client';
 import { GET_PLACEMENT_SEVEN_DATA } from "../query/placementAllQuery";
 
+interface IDataImages {
+    imageSrc: string
+    imageTitle: string
+    imageDesc: string
+}
 
-const Placement7: React.FC = () => {
+interface IDataPlacementSeven {
+    id: number
+    images: [IDataImages]
+    firstText: string
+}
 
-    const { loading, error, data } = useQuery(GET_PLACEMENT_SEVEN_DATA)
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
+const Placement7: React.FC<IDataPlacementSeven> = ({id, images, firstText}) => {
 
     const editText = (text: string) => {
         return (
@@ -42,7 +49,7 @@ const Placement7: React.FC = () => {
             <div>
                 <div className={style.placement_7_title}>comfort & safety while driving.</div>
                 <div className={style.three_column_icon}>
-                    {data.placementSevenDataQuery[0].images.map((data: any, index: number) => (
+                    {images.map((data: any, index: number) => (
                         <div className={`${style.three_column_item} ${style.column_item}`} key={index}>
                             <div className={style.item_icon}>
                                 <div className={style.icon_wrapper}>

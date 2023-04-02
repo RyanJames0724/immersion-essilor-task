@@ -4,11 +4,12 @@ import FlushExample from "./accordion";
 import { gql, useQuery } from "@apollo/client";
 import { GET_PLACEMENT_EIGHT_DATA } from "../query/placementAllQuery";
 
-const Placement8: React.FC = () => {
+interface IDataPlacementEight {
+    id: number
+    firstText: string
+}
 
-    const { loading, error, data } = useQuery(GET_PLACEMENT_EIGHT_DATA)
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
+const Placement8: React.FC<IDataPlacementEight> = ({id, firstText}) => {
 
     return (
         <div className={`${style.one_column_layout_row} ${style.main_placement_8}`}>
@@ -16,7 +17,7 @@ const Placement8: React.FC = () => {
                 <div>
                     <div className={style.FAQ_container}>
                         <div className={style.FAQ_content}>
-                            <h2 className={style.FAQ_title}>{data.placementEightDataQuery[0].firstText}</h2>
+                            <h2 className={style.FAQ_title}>{firstText}</h2>
                             <FlushExample />
                         </div>
                     </div>

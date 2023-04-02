@@ -88,8 +88,6 @@ const accordionListData = new GraphQLObjectType({
     })
 })
 
-
-
 export const placementOneType = new GraphQLObjectType({
     name: 'PlacementOneData',
     description: 'This is the data for placement one',
@@ -98,7 +96,7 @@ export const placementOneType = new GraphQLObjectType({
         bannerBackground: { type: GraphQLString },
         bannerLogo: { type: GraphQLString },
         firstText: { type: GraphQLString },
-        placementButtons: { type: new GraphQLList(getbuttonData) },
+        placementButtons: { type: getbuttonData },
         sideText: { type: GraphQLString },
     })
 });

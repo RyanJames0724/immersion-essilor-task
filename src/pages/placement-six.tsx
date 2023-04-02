@@ -2,28 +2,20 @@ import React from 'react'
 import style from '../scss/style.module.scss'
 import { gql, useQuery } from '@apollo/client';
 import { GET_PLACEMENT_SIX_DATA } from '../query/placementAllQuery';
+import { addEmphasize } from '../logic/edit-text';
 
-const Placement6: React.FC = () => {
+interface IDataImages {
+    imageSrc: string
+    imageTitle: string
+    imageDesc: string
+}
 
-    const { loading, error, data } = useQuery(GET_PLACEMENT_SIX_DATA)
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
+interface IDataPlacementSix {
+    id: number
+    images: [IDataImages]
+}
 
-    const editText = (text: string) => {
-        return (
-            <>
-                {text.split(' ').map((data: string, index: number) => (
-                    <React.Fragment key={index}>
-                        {data === 'Transitions' || data === 'Drivewear' ? (
-                            <em>{data} </em>
-                        ) : (
-                            data + ' '
-                        )}
-                    </React.Fragment>
-                ))}
-            </>
-        );
-    };
+const Placement6: React.FC<IDataPlacementSix> = ({ id, images }) => {
 
     return (
         <div className={`${style.one_column_layout_row} ${style.main_placement_6}`}>
@@ -33,7 +25,7 @@ const Placement6: React.FC = () => {
                         <div className={style.column_drive_title}></div>
                         <div className={style.column_drive_subTitle}></div>
                         <div className={style.column_drive_grid}>
-                            {data.placementSixDataQuery[0].images.map((data: any, index: number) => (
+                            {images.map((data: any, index: number) => (
                                 <div key={index}>
                                     <div className={style.column_drive_box}>
                                         <img
@@ -49,7 +41,7 @@ const Placement6: React.FC = () => {
                                         <h2>{data.imageTitle}</h2>
                                         <h3>
                                             <div>
-                                                <p>{editText(data.imageDesc)}</p>
+                                                <p>{addEmphasize(data.imageDesc)}</p>
                                             </div>
                                             <img className={style.default_image} />
                                         </h3>

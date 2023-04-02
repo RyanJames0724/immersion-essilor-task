@@ -1,33 +1,21 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../scss/style.module.scss'
-import { useQuery } from '@apollo/client';
-import { GET_PLACEMENT_ONE_DATA } from '../query/placementAllQuery.js'
+import { addBreak, addSuperScripted } from '../logic/edit-text';
 
-const PlacementOne: React.FC = () => {
-    const { loading, error, data } = useQuery(GET_PLACEMENT_ONE_DATA)
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
 
-    const editText = (text: string) => {
-        return (
-            <h1>
-                {text.split(' ').map((data: string, index: number) => (
-                    <React.Fragment key={index}>
-                        {data === 'any' ? (
-                            <>
-                                {data}
-                                <br />
-                            </>
+interface IDataPlacementOne {
+    id: number
+    background: string
+    logo: string
+    firstText: string
+    buttonText: string
+    sideText: string
+}
 
-                        ) : (
-                            data + ' '
-                        )}
-                    </React.Fragment>
-                ))}
-            </h1>
-        );
-    };
+const PlacementOne: React.FC<IDataPlacementOne> = ({ id, background, logo, firstText, buttonText, sideText }) => {
+
+    const opacities = [1, 0.9, 0.75, 0.6, 0.45, 0.3, 0.2, 0.1]
 
     return (
         <div className={`${style.one_column_layout_row} ${style.main_placement_1}`}>
@@ -37,26 +25,23 @@ const PlacementOne: React.FC = () => {
                         <div className={`${style.banner_background} ${style.background}`}>
                             <div className={style.background_wrapper}>
                                 <div className={style.image_holder}>
-                                    <img src={data.placementOneDataQuery[0].bannerBackground} alt="front background" loading="lazy" className={style.hero_banner_background} />
+                                    <img src={background} alt="front background" loading="lazy" className={style.hero_banner_background} />
                                 </div>
                             </div>
                         </div>
                         <div className={style.banner_gradient}>
-                            <div className={style.gradient_1}></div>
-                            <div className={style.gradient_2}></div>
-                            <div className={style.gradient_3}></div>
-                            <div className={style.gradient_4}></div>
-                            <div className={style.gradient_5}></div>
-                            <div className={style.gradient_6}></div>
-                            <div className={style.gradient_7}></div>
-                            <div className={style.gradient_8}></div>
+                            {opacities.map((opacity: number) =>
+                                <div key={opacity} className={`${style.gradient} ${style.gradient_Width}`} style={{ 'opacity': `${opacity}` }}></div>
+                            )}
                         </div>
+
+
                         <div className={style.content_left_bottom}>
                             <div className={style.banner_content_logo}>
-                                <img src={data.placementOneDataQuery[0].bannerLogo} alt="content logo" loading="lazy" className={style.img} />
+                                <img src={logo} alt="content logo" loading="lazy" className={style.img} />
                             </div>
                             <div className={style.banner_content_space}></div>
-                            {editText(data.placementOneDataQuery[0].firstText)}
+                            {addBreak(firstText)}
                             <div className={style.banner_button}>
                                 <button className={style.square_button}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={style.svg}>
@@ -64,13 +49,13 @@ const PlacementOne: React.FC = () => {
                                         <polygon points="10 8 16 12 10 16 10 8"></polygon>
                                     </svg>
                                     <label className={style.banner_label} htmlFor="button-text">
-                                        {data.placementOneDataQuery[0].placementButtons[0].buttonText}
+                                        {addSuperScripted(buttonText)}
                                     </label>
                                 </button>
                             </div>
                             <div className={style.long_text}>
                                 <div>
-                                    <p>{data.placementOneDataQuery[0].sideText}</p>
+                                    <p>{sideText}</p>
                                 </div>
                             </div>
                             <a href="#">

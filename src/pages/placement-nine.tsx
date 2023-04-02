@@ -3,11 +3,16 @@ import style from '../scss/style.module.scss'
 import { gql, useQuery } from "@apollo/client";
 import { GET_PLACEMENT_NINE_DATA } from '../query/placementAllQuery';
 
-const Placement9: React.FC = () => {
+interface IPlacementNineText {
+    firstText: string
+}
 
-    const { loading, error, data } = useQuery(GET_PLACEMENT_NINE_DATA)
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
+interface IDataPlacementSeven {
+    id: number
+    placementText: [IPlacementNineText]
+}
+
+const Placement9: React.FC<IDataPlacementSeven> = ({id, placementText}) => {
 
     const editText = (text: string) => {
         return (
@@ -29,7 +34,7 @@ const Placement9: React.FC = () => {
         <div className={`${style.one_column_layout_row} ${style.main_placement_9}`}>
             <div>
                 <div className={style.disclaimer}>
-                    {data.placementNineDataQuery[0].placementText.map((data: any, index: number) => (
+                    {placementText.map((data: any, index: number) => (
                         <span key={index}>
                             <div>
                                 <p>{editText(data.firstText)}</p>

@@ -3,8 +3,12 @@ import style from '../scss/style.module.scss'
 import { gql, useQuery } from "@apollo/client";
 import { GET_PLACEMENT_TEN_DATA } from '../query/placementAllQuery';
 
+interface IDataPlacementTen {
+    id: number
+    firstText: string
+}
 
-const Placement10: React.FC = () => {
+const Placement10: React.FC<IDataPlacementTen> = ({id, firstText}) => {
 
     const { loading, error, data } = useQuery(GET_PLACEMENT_TEN_DATA)
     if (loading) return <p>Loading...</p>

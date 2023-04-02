@@ -2,30 +2,18 @@ import React from "react";
 import style from '../scss/style.module.scss'
 import { gql, useQuery } from '@apollo/client';
 import { GET_PLACEMENT_TWO_DATA } from "../query/placementAllQuery";
+import { addEmphasize } from "../logic/edit-text";
 
-const PlacementTwo: React.FC = () => {
+interface IDataPlacementTwo {
+    id: number
+    firstImageSrc: string
+    secondImageSrc: string
+    thirdImageSrc: string
+    firstText: string
+    secondText: string
+}
 
-    const { loading, error, data } = useQuery(GET_PLACEMENT_TWO_DATA)
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
-
-    const editText = (text: string) => {
-        return (
-            <p>
-                {text.split(' ').map((data: string, index: number) => (
-                    <React.Fragment key={index}>
-                        {data === 'Transitions®' || data === 'Drivewear®' ? (
-                            <em>{data} </em>
-                        ) : (
-                            data + ' '
-                        )}
-                    </React.Fragment>
-                ))}
-            </p>
-        );
-    };
-
-
+const PlacementTwo: React.FC<IDataPlacementTwo> = ({ id, firstImageSrc, secondImageSrc, thirdImageSrc, firstText, secondText }) => {
 
     return (
         <div className={`${style.one_column_layout_row} ${style.main_placement_2}`} id='placement2'>
@@ -38,15 +26,15 @@ const PlacementTwo: React.FC = () => {
                                     <div className={style.wrapper_image}>
                                         <img alt="" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTI4IiBoZWlnaHQ9IjI2NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4=" loading="lazy" />
                                     </div>
-                                    <img src={data.placementTwoDataQuery[0].images[0].imageSrc} alt="second placement logo" className={style.logo_style} loading="lazy" />
+                                    <img src={firstImageSrc} alt="second placement logo" className={style.logo_style} loading="lazy" />
                                 </div>
                             </div>
                             <div className={`${style.animated_details_title} ${style.animated_details_light_main_white1}`}>
-                                <h4 className={style.h4}>{data.placementTwoDataQuery[0].firstText}</h4>
+                                <h4 className={style.h4}>{firstText}</h4>
                             </div>
                             <div className={`${style.animated_details_long_text} ${style.animated_details_light_main_white1}`}>
                                 <div>
-                                    {editText(data.placementTwoDataQuery[0].secondText)}
+                                    {addEmphasize(secondText)}
                                 </div>
                             </div>
                         </div>
@@ -56,7 +44,7 @@ const PlacementTwo: React.FC = () => {
                                     <div className={style.wrapper_image}>
                                         <img alt="" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTI4IiBoZWlnaHQ9IjI2NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4=" className={style.first_image_wrapper} loading="lazy" />
                                     </div>
-                                    <img src={data.placementTwoDataQuery[0].images[2].imageSrc} alt="Widget image/logo" className={style.first_image_style} loading="lazy" />
+                                    <img src={thirdImageSrc} alt="Widget image/logo" className={style.first_image_style} loading="lazy" />
                                 </div>
                             </div>
                             <div className={style.animated_details_row2}>
@@ -67,7 +55,7 @@ const PlacementTwo: React.FC = () => {
                                             <div className={style.wrapper_image}>
                                                 <img alt="" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTI4IiBoZWlnaHQ9IjI2NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4=" loading="lazy" />
                                             </div>
-                                            <img src={data.placementTwoDataQuery[0].images[1].imageSrc} alt="glasses image" className={style.glass_image} loading="lazy" />
+                                            <img src={secondImageSrc} alt="glasses image" className={style.glass_image} loading="lazy" />
                                         </div>
                                     </div>
                                     <div className={style.animated_details_lens}></div>

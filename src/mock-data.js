@@ -4,12 +4,12 @@ export const getAllData = [
         bannerBackground: '../src/assets/images/placement-one-img/banner-background.webp',
         bannerLogo: '../src/assets/images/placement-one-img/banner-content-logo.webp',
         firstText: "on the road in any day light.",
-        placementButtons: [
-            {
-                id: 1,
-                buttonText: "see drivewear® in action"
-            }
-        ],
+        placementButtons:
+        {
+            id: 1,
+            buttonText: "see drivewear ® in action"
+        }
+        ,
         sideText: "Frame by ici berlin - Lenses Transitions Drivewear"
     },
     {
@@ -181,28 +181,28 @@ export const getAllData = [
             [
                 {
                     id: 1,
-                    accordionHeader: 'Can <em>Transitions Drivewear</em> be used at night?',
-                    accordionBody: 'It is not recommended to use <em>Transitions Drivewear</em> lenses at night. <em>Drivewear </em>lenses are optimized for day light situation, and since <em>Transitions Drivewear</em> is always tinted, (min category 2, max category 3), it can be too dark to wear after dusk. Many Vision &amp; Highway Safety experts believe that NO tint should ever be used at night.'
+                    accordionHeader: 'Can Transitions Drivewear be used at night?',
+                    accordionBody: 'It is not recommended to use Transitions Drivewear lenses at night. Drivewear lenses are optimized for day light situation, and since Transitions Drivewear is always tinted, (min category 2, max category 3), it can be too dark to wear after dusk. Many Vision &amp; Highway Safety experts believe that NO tint should ever be used at night.'
                 },
                 {
                     id: 2,
-                    accordionHeader: 'How dark do <em>Transitions Drivewear</em> lenses get?',
-                    accordionBody: 'In very bright light / outside conditions, <em>Transitions Drivewear</em> lenses remove glare and provide maximum filtration of excess light for optimum visual comfort and acuity.'
+                    accordionHeader: 'How dark do Transitions Drivewear lenses get?',
+                    accordionBody: 'In very bright light / outside conditions, Transitions Drivewear lenses remove glare and provide maximum filtration of excess light for optimum visual comfort and acuity.'
                 },
                 {
                     id: 3,
-                    accordionHeader: 'Can an AR coat be added to<em>Transitions Drivewear</em>?',
-                    accordionBody: 'Yes, <em>Transitions Drivewear</em> is compatible with most AR coatings. Please check with your coating supplier for further details.'
+                    accordionHeader: 'Can an AR coat be added to Transitions Drivewear?',
+                    accordionBody: 'Yes, Transitions Drivewear is compatible with most AR coatings. Please check with your coating supplier for further details.'
                 },
                 {
                     id: 4,
-                    accordionHeader: 'Is <em>Transitions Drivewear</em> available in finished single vision?',
-                    accordionBody: 'Yes. Plano <em>Transitions Drivewear</em> lenses are available only in finished single vision. This is because <em>Transitions Drivewear</em> is a polarized lens and therefore must be on the 180° axis line at all times. It is available in multiple base curves in semi-finished single vision to match the Rx needs of the patient.'
+                    accordionHeader: 'Is Transitions Drivewear available in finished single vision?',
+                    accordionBody: 'Yes. Plano Transitions Drivewear lenses are available only in finished single vision. This is because <em>Transitions Drivewear</em> is a polarized lens and therefore must be on the 180° axis line at all times. It is available in multiple base curves in semi-finished single vision to match the Rx needs of the patient.'
                 },
                 {
                     id: 5,
-                    accordionHeader: 'Are <em>Transitions Drivewear</em> lenses polarized only when exposed to sunlight?',
-                    accordionBody: '<em>Transitions Drivewear</em> are polarized at all times, and they also darken and change color according to sunlight conditions.<br /><em>Transitions Drivewear</em> lenses are the only polarized Rx lenses that darken and change color behind the windshield of a car.'
+                    accordionHeader: 'Are Transitions Drivewear lenses polarized only when exposed to sunlight?',
+                    accordionBody: 'Transitions Drivewear are polarized at all times, and they also darken and change color according to sunlight conditions.<br /><em>Transitions Drivewear</em> lenses are the only polarized Rx lenses that darken and change color behind the windshield of a car.'
                 }
             ]
     }

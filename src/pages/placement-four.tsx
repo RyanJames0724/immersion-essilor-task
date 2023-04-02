@@ -2,29 +2,21 @@ import React from 'react'
 import style from '../scss/style.module.scss'
 import { gql, useQuery } from '@apollo/client';
 import { GET_PLACEMENT_FOUR_DATA } from '../query/placementAllQuery';
+import { addEmphasize } from '../logic/edit-text';
 
+interface ICard {
+    id: number
+    cardHeader: string
+    cardContent: string
+}
 
-const Placement4: React.FC = () => {
+interface IDataPlacementFour {
+    id: number
+    firstText: string
+    card: [ICard]
+}
 
-    const { loading, error, data } = useQuery(GET_PLACEMENT_FOUR_DATA)
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
-
-    const editText = (text: string) => {
-        return (
-            <>
-                {text.split(' ').map((data: string, index: number) => (
-                    <React.Fragment key={index}>
-                        {data === 'Transitions' || data === 'Drivewear' ? (
-                            <em>{data} </em>
-                        ) : (
-                            data + ' '
-                        )}
-                    </React.Fragment>
-                ))}
-            </>
-        );
-    };
+const Placement4: React.FC<IDataPlacementFour> = ({id, firstText, card}) => {
 
     return (
         <div className={`${style.one_column_layout_row} ${style.main_placement_4}`}>
@@ -32,17 +24,17 @@ const Placement4: React.FC = () => {
                 <div className={style.three_static_card_dark}>
                     <div className={style.card_long_text}>
                         <p>
-                            {editText(data.placementFourDataQuery[0].firstText)}
+                            {addEmphasize(firstText)}
                         </p>
                     </div>
                     <div className={style.three_card_main}>
-                        {data.placementFourDataQuery[0].card.map((card: any) => (
+                        {card.map((card: any) => (
                             <div className={`${style.card} ${style.static_dark_card} ${style.dark_card_brown}`} key={card.id}>
                                 <div>
                                     <h2 className={style.static_card_header}>{card.cardHeader}</h2>
                                     <div className={style.static_dark_content}>
                                         <div>
-                                            <p>{card.id === 3 ? editText(card.cardContent) : card.cardContent}</p>
+                                            <p>{card.id === 3 ? addEmphasize(card.cardContent) : card.cardContent}</p>
                                         </div>
                                     </div>
                                 </div>

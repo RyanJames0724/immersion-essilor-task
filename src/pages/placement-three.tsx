@@ -4,25 +4,19 @@ import { gql, useQuery } from '@apollo/client';
 import GridBox from "../component/GridBox";
 import { GET_PLACEMENT_THREE_DATA } from "../query/placementAllQuery";
 
-type IData = {
-    __typename: string,
-    id: number
-    data: [
-        { title: string, id: number }
-    ]
+interface IDataImages {
+    imageSrc: string
+    imageBackgroundSrc: string
+    textDefaultShow: string
+    textHoverShow: string
 }
 
-const Placement3: React.FC = () => {
+interface IDataPlacementThree {
+    id: number
+    images: [IDataImages]
+}
 
-    const [isHovering, setIsHovering] = useState<boolean>(false)
-
-    const { loading, error, data } = useQuery(GET_PLACEMENT_THREE_DATA)
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
-
-    const sampleData = data.placementThreeDataQuery[0].images.map((data: IData) => data);
-    console.log(sampleData);
-
+const PlacementThree: React.FC<IDataPlacementThree> = ({ id, images }) => {
 
     return (
         <div className={`${style.one_column_layout_row} ${style.main_placement_3}`}>
@@ -30,7 +24,7 @@ const Placement3: React.FC = () => {
                 <div className={style.two_layer_card_main}>
                     <div className={style.card_light_wrapper}>
 
-                        {data.placementThreeDataQuery[0].images.map((data: any, index: number) => (
+                        {images.map((data: any, index: number) => (
                             <GridBox key={index} data={data} index={index} />
                         ))}
                     </div>
@@ -40,4 +34,4 @@ const Placement3: React.FC = () => {
     )
 }
 
-export default Placement3
+export default PlacementThree
