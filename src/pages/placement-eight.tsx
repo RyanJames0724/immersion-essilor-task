@@ -1,13 +1,9 @@
 import React from "react";
 import style from '../scss/style.module.scss'
 import FlushExample from "./accordion";
-import { gql, useQuery } from "@apollo/client";
-import { GET_PLACEMENT_EIGHT_DATA } from "../query/placementAllQuery";
+import { IDataPlacementEight } from "../model/placementsModel";
 
-interface IDataPlacementEight {
-    id: number
-    firstText: string
-}
+
 
 const Placement8: React.FC<IDataPlacementEight> = ({id, firstText}) => {
 

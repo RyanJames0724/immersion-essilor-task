@@ -1,22 +1,6 @@
 import React from "react";
 import style from '../scss/style.module.scss'
-import protectionImage from '../assets/images/placement-seven-img/protection-image.webp'
-import comfortImage from '../assets/images/placement-seven-img/comfort-image.webp'
-import visionImage from '../assets/images/placement-seven-img/vision-image.webp'
-import { useQuery } from '@apollo/client';
-import { GET_PLACEMENT_SEVEN_DATA } from "../query/placementAllQuery";
-
-interface IDataImages {
-    imageSrc: string
-    imageTitle: string
-    imageDesc: string
-}
-
-interface IDataPlacementSeven {
-    id: number
-    images: [IDataImages]
-    firstText: string
-}
+import { IDataPlacementSeven } from "../model/placementsModel";
 
 const Placement7: React.FC<IDataPlacementSeven> = ({id, images, firstText}) => {
 

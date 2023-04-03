@@ -2,16 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../scss/style.module.scss'
 import { addBreak, addSuperScripted } from '../logic/edit-text';
+import { IDataPlacementOne } from '../model/placementsModel';
 
-
-interface IDataPlacementOne {
-    id: number
-    background: string
-    logo: string
-    firstText: string
-    buttonText: string
-    sideText: string
-}
 
 const PlacementOne: React.FC<IDataPlacementOne> = ({ id, background, logo, firstText, buttonText, sideText }) => {
 
@@ -58,7 +50,7 @@ const PlacementOne: React.FC<IDataPlacementOne> = ({ id, background, logo, first
                                     <p>{sideText}</p>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="#placement2">
                                 <div className={`${style.icon_arrow_bottom} ${style.icon_arrow}`}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1px" strokeLinecap="round" strokeLinejoin="round">
                                         <polyline points="6 9 12 15 18 9"></polyline>

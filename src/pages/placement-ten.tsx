@@ -2,11 +2,8 @@ import React from 'react'
 import style from '../scss/style.module.scss'
 import { gql, useQuery } from "@apollo/client";
 import { GET_PLACEMENT_TEN_DATA } from '../query/placementAllQuery';
+import { IDataPlacementTen } from '../model/placementsModel';
 
-interface IDataPlacementTen {
-    id: number
-    firstText: string
-}
 
 const Placement10: React.FC<IDataPlacementTen> = ({id, firstText}) => {
 

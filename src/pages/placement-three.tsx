@@ -1,20 +1,8 @@
 import React, { useState } from "react";
 import style from '../scss/style.module.scss'
-import { gql, useQuery } from '@apollo/client';
 import GridBox from "../component/GridBox";
-import { GET_PLACEMENT_THREE_DATA } from "../query/placementAllQuery";
+import { IDataPlacementThree } from "../model/placementsModel";
 
-interface IDataImages {
-    imageSrc: string
-    imageBackgroundSrc: string
-    textDefaultShow: string
-    textHoverShow: string
-}
-
-interface IDataPlacementThree {
-    id: number
-    images: [IDataImages]
-}
 
 const PlacementThree: React.FC<IDataPlacementThree> = ({ id, images }) => {
 

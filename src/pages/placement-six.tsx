@@ -1,19 +1,7 @@
 import React from 'react'
 import style from '../scss/style.module.scss'
-import { gql, useQuery } from '@apollo/client';
-import { GET_PLACEMENT_SIX_DATA } from '../query/placementAllQuery';
 import { addEmphasize } from '../logic/edit-text';
-
-interface IDataImages {
-    imageSrc: string
-    imageTitle: string
-    imageDesc: string
-}
-
-interface IDataPlacementSix {
-    id: number
-    images: [IDataImages]
-}
+import { IDataPlacementSix } from '../model/placementsModel';
 
 const Placement6: React.FC<IDataPlacementSix> = ({ id, images }) => {
 

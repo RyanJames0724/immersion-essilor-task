@@ -1,20 +1,8 @@
 import React from 'react'
 import style from '../scss/style.module.scss'
-import { gql, useQuery } from '@apollo/client';
-import { GET_PLACEMENT_FOUR_DATA } from '../query/placementAllQuery';
 import { addEmphasize } from '../logic/edit-text';
+import { IDataPlacementFour } from '../model/placementsModel';
 
-interface ICard {
-    id: number
-    cardHeader: string
-    cardContent: string
-}
-
-interface IDataPlacementFour {
-    id: number
-    firstText: string
-    card: [ICard]
-}
 
 const Placement4: React.FC<IDataPlacementFour> = ({id, firstText, card}) => {
 

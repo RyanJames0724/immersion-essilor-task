@@ -2,17 +2,10 @@ import React from 'react'
 import style from '../scss/style.module.scss'
 import { gql, useQuery } from "@apollo/client";
 import { GET_PLACEMENT_NINE_DATA } from '../query/placementAllQuery';
+import { IDataPlacementNine } from '../model/placementsModel';
 
-interface IPlacementNineText {
-    firstText: string
-}
 
-interface IDataPlacementSeven {
-    id: number
-    placementText: [IPlacementNineText]
-}
-
-const Placement9: React.FC<IDataPlacementSeven> = ({id, placementText}) => {
+const Placement9: React.FC<IDataPlacementNine> = ({id, placementText}) => {
 
     const editText = (text: string) => {
         return (
