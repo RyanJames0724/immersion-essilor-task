@@ -40,5 +40,5 @@ $secondary: #7f4006;
 $tertiary: #1c1c1c;
 
 @mixin layoutBackground($color: $primary) {
-    background: $color;
+    background: red;
 }
